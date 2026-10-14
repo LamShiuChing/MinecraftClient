@@ -10,6 +10,7 @@ import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoFarm;
 import com.overkill.client.module.modules.AutoFish;
 import com.overkill.client.module.modules.AutoMLG;
+import com.overkill.client.module.modules.AutoSwap;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.BoatFly;
@@ -28,6 +29,7 @@ import com.overkill.client.module.modules.Fullbright;
 import com.overkill.client.module.modules.Hammer;
 import com.overkill.client.module.modules.HighJump;
 import com.overkill.client.module.modules.InfoHUD;
+import com.overkill.client.module.modules.InventorySort;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.LongJump;
@@ -120,7 +122,9 @@ public final class Modules {
 		new BowAimbot(),
 		new StorageESP(),
 		new NoHurtCam(),
-		new AntiBlind()
+		new AntiBlind(),
+		new AutoSwap(),
+		new InventorySort()
 	);
 
 	private Modules() {

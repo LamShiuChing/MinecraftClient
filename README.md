@@ -83,6 +83,8 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | StorageESP | Boxes chests (orange), trapped chests (red), barrels (brown), shulker boxes (pink) and ender chests (cyan) through walls within Range blocks; Hoppers toggle. The HUD shows how many it found |
 | Render | NoHurtCam | No camera shake when you take damage (the damage itself is unchanged) |
 | Render | AntiBlind | Hides what blocks your view, only on screen (the effects stay): Blindness (blindness and darkness fog, darkness flicker), Nausea (nausea and portal wobble), Overlays (pumpkin, fire, powder snow), Liquids (water and lava fog) |
+| Player | AutoSwap | When the held tool or weapon is down to Durability uses left (default 5), swaps in the best spare of the same kind from your inventory (pickaxe for pickaxe, more durable material first, then enchantments); with no spare it holds an empty hotbar slot (else a non-damageable item) and warns in chat. AutoTool never picks a tool at the threshold |
+| Player | InventorySort | Press its key: sorts the open chest, barrel or shulker box (key works with the screen open), else your main inventory (hotbar, armor and offhand stay). Blocks, tools, food, then the rest, by name; partial stacks merged. Normal clicks, nothing made or lost; bundles stay put |
 
 ## Build
 

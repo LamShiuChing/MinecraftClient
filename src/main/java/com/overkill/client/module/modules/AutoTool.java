@@ -55,10 +55,11 @@ public class AutoTool extends Module {
 		lastUse = p.tickCount;
 		int cur = inv.getSelectedSlot();
 		int best = cur;
-		double bestScore = score.applyAsDouble(inv.getItem(cur));
+		// A held item AutoSwap wants out of the hand loses to anything (scores are >= 0)
+		double bestScore = AutoSwap.worn(inv.getItem(cur)) ? -1 : score.applyAsDouble(inv.getItem(cur));
 		for (int i = 0; i < Inventory.INVENTORY_SIZE; i++) {
 			ItemStack s = inv.getItem(i);
-			if (saveTools.get() && s.isDamageableItem() && s.getMaxDamage() - s.getDamageValue() < 10) continue;
+			if (saveTools.get() && s.isDamageableItem() && s.getMaxDamage() - s.getDamageValue() < 10 || AutoSwap.worn(s)) continue;
 			double v = score.applyAsDouble(s);
 			if (v > bestScore) {
 				best = i;
