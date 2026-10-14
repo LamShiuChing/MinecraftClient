@@ -3,6 +3,7 @@ package com.overkill.client.module;
 import com.overkill.client.gui.Toasts;
 import com.overkill.client.module.modules.AimBot;
 import com.overkill.client.module.modules.AirJump;
+import com.overkill.client.module.modules.AirPlace;
 import com.overkill.client.module.modules.AntiBlind;
 import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
@@ -12,6 +13,7 @@ import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoFarm;
 import com.overkill.client.module.modules.AutoFish;
 import com.overkill.client.module.modules.AutoMLG;
+import com.overkill.client.module.modules.AutoPortal;
 import com.overkill.client.module.modules.AutoSwap;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
@@ -37,6 +39,7 @@ import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.InventorySort;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
+import com.overkill.client.module.modules.LavaFiller;
 import com.overkill.client.module.modules.LongJump;
 import com.overkill.client.module.modules.LowHealth;
 import com.overkill.client.module.modules.Nametags;
@@ -145,7 +148,10 @@ public final class Modules {
 		new TargetHUD(),
 		new RecordingMode(),
 		new LowHealth(),
-		new DangerAlerts()
+		new DangerAlerts(),
+		new AutoPortal(),
+		new AirPlace(),
+		new LavaFiller()
 	);
 
 	private Modules() {
