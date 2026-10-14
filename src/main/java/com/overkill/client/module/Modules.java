@@ -1,5 +1,6 @@
 package com.overkill.client.module;
 
+import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
@@ -14,6 +15,7 @@ import com.overkill.client.module.modules.Hammer;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.NoFall;
+import com.overkill.client.module.modules.NoMiningPenalty;
 import com.overkill.client.module.modules.Nuker;
 import com.overkill.client.module.modules.Scaffold;
 import com.overkill.client.module.modules.Speed;
@@ -54,7 +56,9 @@ public final class Modules {
 		new FastPlace(),
 		new Hammer(),
 		new VeinMiner(),
-		new AutoTool()
+		new AutoTool(),
+		new NoMiningPenalty(),
+		new AntiSuffocate()
 	);
 
 	private Modules() {

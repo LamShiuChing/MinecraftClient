@@ -50,6 +50,8 @@ Settings and keybinds save to `config/overkill.json`.
 | World | Hammer | Mining a block also breaks a flat 3x3 or 5x5 around it in the mined face's plane: blocks your tool is right for, or instant ones. Drops fall normally |
 | World | VeinMiner | Mining an ore or a log also breaks every connected block of the same kind, up to Max (ores, logs = tree feller). Drops fall normally |
 | Player | AutoTool | Switches to the best tool for the block you mine (one that gets drops first) and the strongest weapon for what you hit, also for Nuker, Hammer, VeinMiner and KillAura. Pulls tools from the main inventory, skips nearly broken ones (Save tools), switches back after manual use |
+| World | NoMiningPenalty | Mines at ground speed in the air (Air: flying, jumping, falling) and with your head underwater (Water; works once you've been in the world a little while, longer for very hard blocks) |
+| Player | AntiSuffocate | Breaks blocks that would suffocate you, and the block falling sand or gravel would land on to bury your head (with AutoTool's tool). Drops fall normally. A block that appears in your head at once (piston, teleport) can still hit once |
 
 ## Build
 
