@@ -63,6 +63,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | Freecam | Fly the camera away from your body (WASD, jump/sneak for up/down, mouse to look, scroll for speed); the body stays where it is and doesn't click. Interact: aim and click from the camera (mine, open chests and doors, press buttons, hit mobs); for each click your body teleports next to the target and back, and waits there while a chest is open |
 | Movement | ClickTP | Right click with an empty hand on a block out of reach (up to Range blocks) to teleport on top of it. No fall damage |
 | Combat | TPAura | KillAura up to Range (5-60) blocks away: teleports next to each mob, hits it at full cooldown (Criticals and AutoTool apply) and teleports back in the same tick. Only mobs it can reach through open space (also the Ender Dragon's parts) |
+| Movement | SafeWalk | Never walk off an edge: stops at edges like sneaking, but at full speed. Jumping off still works |
+| Movement | Parkour | Jumps at the very last moment before you walk off an edge, for max-distance jumps. Not while sneaking |
+| Player | AutoMLG | Water bucket clutch: falling more than Distance (4-30) blocks onto solid ground, looks down, places a water bucket from your hotbar just before you land and picks the water back up. Not in the Nether (water evaporates) |
 
 ## Build
 
