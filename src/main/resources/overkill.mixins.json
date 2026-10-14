@@ -16,7 +16,14 @@
 		"MinecraftFastPlaceAccessor",
 		"MultiPlayerGameModeMiningMixin",
 		"ClientLevelAccessor",
-		"BlockStatePredictionHandlerAccessor"
+		"BlockStatePredictionHandlerAccessor",
+		"CameraFreecamMixin",
+		"KeyboardInputFreecamMixin",
+		"EntityFreecamMixin",
+		"MouseHandlerFreecamMixin",
+		"GameRendererFreecamMixin",
+		"MinecraftFreecamMixin",
+		"MinecraftClickTPMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
