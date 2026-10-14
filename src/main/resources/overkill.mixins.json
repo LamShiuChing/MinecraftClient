@@ -50,7 +50,8 @@
 		"ClientLevelNoRenderMixin",
 		"WeatherEffectRendererNoRenderMixin",
 		"LocalPlayerNoRenderMixin",
-		"FallingBlockRendererNoRenderMixin"
+		"FallingBlockRendererNoRenderMixin",
+		"ItemStackShulkerPeekMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

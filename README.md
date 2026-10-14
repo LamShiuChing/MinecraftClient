@@ -122,6 +122,9 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | World | LavaFiller | Fills lava source blocks within Range (Flowing: also flowing lava) with cobblestone, netherrack, dirt or cobbled deepslate from your inventory (each a toggle; never any other block), nearest first, 4 per tick |
 | Render | LightOverlay | A cross on every block within Range (8-32) where hostile mobs can spawn, by vanilla's own spawn check (glass, bottom slabs and the like never): red = no light at all, they spawn now; yellow = no block light but daylight, they spawn at night. A torch clears its area within a second. Hidden in RecordingMode |
 | Render | NoRender | Hides, only on screen: Particles (all), Explosions (the cloud and debris smoke; the blocks still break), Weather (rain, snow and splashes; it still rains), Totem (the pop-up animation; the totem still saves you), Boss bar, Falling blocks (the entity is still there). The vignette has its own vanilla option (Video Settings) |
+| Render | ShulkerPeek | Hover a shulker box in any inventory: its contents show as a 9x3 grid of items with counts, in the box's colour (purple when undyed), instead of vanilla's five-line list. Bundles already have a grid in vanilla |
+| Render | BetterTooltips | Extra tooltip lines, each with a toggle: Durability (`Durability: 200/250`, coloured like the durability bar), Food (`Food: +5 (sat 6.0)`), Repair cost (the anvil work penalty of anvil-worked items) |
+| Player | AutoBreed | Feeds adult animals within Range (2-6) their breeding food from your inventory (wheat for cows, sheep, goats, seeds for chickens, carrots for pigs...), always in pairs of the same kind, up to 4 per tick, with normal right clicks; the server breeds them as usual. Never calves; not horses, llamas, camels, wolves, cats, parrots or ocelots. A fed animal is left alone for 5 minutes (the breeding cooldown, which the client can't see) |
 
 ## Build
 
