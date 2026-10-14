@@ -1,0 +1,35 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+java {
+	toolchain.languageVersion = JavaLanguageVersion.of(25)
+	withSourcesJar()
+}
+
+jar {
+	from("LICENSE")
+}
+
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "overkill-test"
+		eula = true // Agrees to the Minecraft EULA for test runs
+	}
+}
