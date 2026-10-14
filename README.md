@@ -55,6 +55,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | Zoom | Smooth binocular zoom for cinematic shots, toggled with its key: the view eases to 2x-50x (Zoom slider), the mouse wheel zooms in and out, the mouse slows down to match |
 | Client | InfoHUD | Info panel under the watermark: XYZ, the same spot in the Nether/Overworld, facing, biome, FPS, in-game day and time (each line can be turned off) |
 | Movement | AntiVoid | Falling with nothing below you down to the bottom of the world catches you (Height: blocks you fall first) and you fly until you land; sneak to go down, no fall damage |
+| Player | WaterBreathing | Never drown: while your air is below full, every other tick the server sees your eyes just above the water surface (air +4 there, -1 below). Needs open water straight above you (no blocks in the way); costs some hunger, more the deeper you are |
+| Movement | NoSlow | No slowdown while eating, drinking, blocking with a shield or drawing a bow (and you keep sprinting); Cobweb, Soul sand, Honey and Berry bush toggles |
+| Movement | Spider | Walk into a wall to climb it like a ladder (speed slider) |
 
 ## Build
 

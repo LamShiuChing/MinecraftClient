@@ -18,7 +18,9 @@
 		"ClientLevelAccessor",
 		"BlockStatePredictionHandlerAccessor",
 		"CameraZoomMixin",
-		"MouseHandlerZoomMixin"
+		"MouseHandlerZoomMixin",
+		"LocalPlayerNoSlowMixin",
+		"EntityNoSlowMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

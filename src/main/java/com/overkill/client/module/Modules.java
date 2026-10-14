@@ -18,15 +18,18 @@ import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.NoFall;
+import com.overkill.client.module.modules.NoSlow;
 import com.overkill.client.module.modules.Nuker;
 import com.overkill.client.module.modules.Scaffold;
 import com.overkill.client.module.modules.Speed;
+import com.overkill.client.module.modules.Spider;
 import com.overkill.client.module.modules.Sprint;
 import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
 import com.overkill.client.module.modules.StrongholdFinder;
 import com.overkill.client.module.modules.VeinMiner;
 import com.overkill.client.module.modules.Velocity;
+import com.overkill.client.module.modules.WaterBreathing;
 import com.overkill.client.module.modules.XRay;
 import com.overkill.client.module.modules.Zoom;
 import net.minecraft.client.Minecraft;
@@ -64,7 +67,10 @@ public final class Modules {
 		new ChestStealer(),
 		new Zoom(),
 		new InfoHUD(),
-		new AntiVoid()
+		new AntiVoid(),
+		new WaterBreathing(),
+		new NoSlow(),
+		new Spider()
 	);
 
 	private Modules() {
