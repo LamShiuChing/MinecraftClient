@@ -1,5 +1,6 @@
 package com.overkill.client.module;
 
+import com.overkill.client.module.modules.AntiBlind;
 import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
 import com.overkill.client.module.modules.AutoArmor;
@@ -21,6 +22,7 @@ import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.NoFall;
+import com.overkill.client.module.modules.NoHurtCam;
 import com.overkill.client.module.modules.NoMiningPenalty;
 import com.overkill.client.module.modules.NoSlow;
 import com.overkill.client.module.modules.Nuker;
@@ -30,6 +32,7 @@ import com.overkill.client.module.modules.Spider;
 import com.overkill.client.module.modules.Sprint;
 import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
+import com.overkill.client.module.modules.StorageESP;
 import com.overkill.client.module.modules.StrongholdFinder;
 import com.overkill.client.module.modules.TPAura;
 import com.overkill.client.module.modules.VeinMiner;
@@ -80,7 +83,10 @@ public final class Modules {
 		new AntiSuffocate(),
 		new Freecam(),
 		new ClickTP(),
-		new TPAura()
+		new TPAura(),
+		new StorageESP(),
+		new NoHurtCam(),
+		new AntiBlind()
 	);
 
 	private Modules() {

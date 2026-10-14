@@ -27,7 +27,13 @@
 		"MouseHandlerFreecamMixin",
 		"GameRendererFreecamMixin",
 		"MinecraftFreecamMixin",
-		"MinecraftClickTPMixin"
+		"MinecraftClickTPMixin",
+		"GameRendererNoHurtCamMixin",
+		"CameraAntiBlindMixin",
+		"MobEffectFogEnvironmentAntiBlindMixin",
+		"LightmapRenderStateExtractorAntiBlindMixin",
+		"LevelExtractorAntiBlindMixin",
+		"HudAntiBlindMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
