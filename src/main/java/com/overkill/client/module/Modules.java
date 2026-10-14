@@ -1,7 +1,9 @@
 package com.overkill.client.module;
 
+import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.ClickGuiModule;
+import com.overkill.client.module.modules.Criticals;
 import com.overkill.client.module.modules.ESP;
 import com.overkill.client.module.modules.FastBreak;
 import com.overkill.client.module.modules.Fly;
@@ -14,6 +16,7 @@ import com.overkill.client.module.modules.Sprint;
 import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
 import com.overkill.client.module.modules.StrongholdFinder;
+import com.overkill.client.module.modules.Velocity;
 import com.overkill.client.module.modules.XRay;
 import net.minecraft.client.Minecraft;
 
@@ -36,7 +39,10 @@ public final class Modules {
 		new KillAura(),
 		new Nuker(),
 		new FastBreak(),
-		new AutoTotem()
+		new AutoTotem(),
+		new Criticals(),
+		new Velocity(),
+		new AutoEat()
 	);
 
 	private Modules() {

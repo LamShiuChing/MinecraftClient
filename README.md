@@ -41,6 +41,9 @@ Settings and keybinds save to `config/overkill.json`.
 | World | Nuker | Breaks every block around you (range, Flatten = only at or above your feet); insta-mineable blocks all at once, others one per tick. Drops fall normally |
 | World | FastBreak | Mines about 30% faster (the server accepts a break at 70% progress) with no pause between blocks |
 | Combat | AutoTotem | Moves a Totem of Undying from your inventory to your offhand |
+| Combat | Criticals | Every melee hit (yours and KillAura's) is a critical hit, 1.5x damage, no fall damage |
+| Combat | Velocity | No knockback from hits and explosions (Horizontal / Vertical: % you still take) |
+| Player | AutoEat | Eats your best food when hunger drops to a threshold or health is low; golden apples only when low, never rotten flesh, spider eyes or other bad food |
 
 ## Build
 
