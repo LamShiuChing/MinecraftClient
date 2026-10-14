@@ -117,6 +117,9 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Client | RecordingMode | F6: a clean frame for recording. Hides InfoHUD, ArmorHUD, TargetHUD, Tracers, Nametags and toasts; Hide vanilla also hides the vanilla HUD (hotbar, hearts, crosshair, chat, boss bar...). Keeps the watermark, module list and Stopwatch (rules 6 and 7) |
 | Player | LowHealth | Health below Hearts (default 4): a warning bell (Sound) and a red glow pulsing at the screen edges until you heal. Only warns |
 | Player | DangerAlerts | Big warning above the crosshair and a ping (once per danger, at most every 3 s) for: Lava up to 2 blocks ahead or below you while falling; a Fall that would kill you or deal Fall warn HP (not with NoFall, or AutoMLG with a water bucket; armor and potions are not counted, so it warns early); a Creeper within 5 blocks (7 while hissing); the Void below you (not with AntiVoid). Only warns |
+| Render | Trajectories | While you hold a bow (the arc for the current draw, full power when not drawing), crossbow, trident, ender pearl, snowball, egg, splash/lingering potion or bottle o' enchanting: its flight path as a yellow line, with a box on the block or mob it would hit. Real 26.3 gravity and drag per projectile, plus your own movement like vanilla |
+| Render | Search | Boxes spawners, ancient debris, diamond ore (also deepslate), end portal frames and nether portals through walls within Range (16-128), one toggle each; the world looks normal (no XRay). Scans a few chunk sections a tick, skips sections that can't contain them and rescans a section when a block in it changes. The HUD shows how many it found |
+| Render | Breadcrumbs | A cyan line along where you walked (a point every half block, Length points), one trail per dimension, to find the way back in caves. Cleared when you turn it off |
 
 ## Build
 

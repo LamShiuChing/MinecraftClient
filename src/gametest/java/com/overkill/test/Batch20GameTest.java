@@ -7,6 +7,7 @@ import com.overkill.client.Config;
 import com.overkill.client.gui.Toasts;
 import com.overkill.client.module.Module;
 import com.overkill.client.module.Modules;
+import com.overkill.client.module.modules.Stopwatch;
 import com.overkill.client.setting.BoolSetting;
 import com.overkill.client.setting.NumberSetting;
 import com.overkill.client.setting.Setting;
@@ -136,7 +137,7 @@ public class Batch20GameTest implements FabricClientGameTest {
 		JsonObject loaded = ctx.computeOnClient(mc -> Config.toJson());
 		check(loaded.equals(saved), "Load restores the exact state:\nsaved  " + saved + "\nloaded " + loaded);
 		check(ctx.computeOnClient(mc -> !bool("Profiles", "Load").get()), "Load resets itself");
-		String stopwatch = ctx.computeOnClient(mc -> module("Stopwatch").info());
+		String stopwatch = ctx.computeOnClient(mc -> Stopwatch.time());
 		log("Stopwatch right after loading: " + stopwatch + ", enabled " + enabledNames(ctx));
 		check(stopwatch.startsWith("0:00."), "Stopwatch.onEnable ran (restarted), shows " + stopwatch);
 		check(!ctx.computeOnClient(mc -> mc.options.keySprint.isDown()), "Sprint.onDisable ran (released the sprint key)");
