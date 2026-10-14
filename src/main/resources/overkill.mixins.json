@@ -9,7 +9,9 @@
 		"MinecraftMixin",
 		"SectionCompilerMixin",
 		"LightmapRenderStateExtractorMixin",
-		"MultiPlayerGameModeAccessor"
+		"MultiPlayerGameModeAccessor",
+		"LiquidBlockMixin",
+		"MinecraftFastPlaceAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

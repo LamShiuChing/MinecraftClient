@@ -41,6 +41,9 @@ Settings and keybinds save to `config/overkill.json`.
 | World | Nuker | Breaks every block around you (range, Flatten = only at or above your feet); insta-mineable blocks all at once, others one per tick. Drops fall normally |
 | World | FastBreak | Mines about 30% faster (the server accepts a break at 70% progress) with no pause between blocks |
 | Combat | AutoTotem | Moves a Totem of Undying from your inventory to your offhand |
+| Movement | Jesus | Walk on water and lava (Lava toggle); sneak to sink |
+| World | Scaffold | Places blocks from your inventory under your feet, so walking off an edge builds a bridge; Tower: hold jump standing still to pillar up. Full solid blocks only, never sand or gravel |
+| World | FastPlace | No delay between block placements and item uses while holding right click |
 
 ## Build
 
