@@ -24,6 +24,10 @@ public class NumberSetting extends Setting<Double> {
 	}
 
 	public String display() {
-		return step >= 1 ? String.valueOf(Math.round(value)) : String.format("%.2f", value);
+		return display(value);
+	}
+
+	public String display(double v) {
+		return step >= 1 ? String.valueOf(Math.round(v)) : String.format("%.2f", v);
 	}
 }
