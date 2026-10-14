@@ -133,10 +133,10 @@ public class Batch25GameTest implements FabricClientGameTest {
 		float controlHp = health(server);
 		log("AutoShield control (off): health " + controlHp + " after " + t + " ticks, " + controlArrows.size() + " arrows");
 		check(controlHp < 20, "without AutoShield the skeleton hits us");
-		heal(ctx, server);
-
+		// Shield up first, heal once an arrow already in flight from the control has landed
 		set(ctx, "AutoShield", true);
 		ctx.waitTicks(20);
+		heal(ctx, server);
 		Set<UUID> shot = new HashSet<>();
 		float lowest = 20;
 		int blocking = 0;
