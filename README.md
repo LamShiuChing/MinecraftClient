@@ -50,6 +50,9 @@ Settings and keybinds save to `config/overkill.json`.
 | World | Hammer | Mining a block also breaks a flat 3x3 or 5x5 around it in the mined face's plane: blocks your tool is right for, or instant ones. Drops fall normally |
 | World | VeinMiner | Mining an ore or a log also breaks every connected block of the same kind, up to Max (ores, logs = tree feller). Drops fall normally |
 | Player | AutoTool | Switches to the best tool for the block you mine (one that gets drops first) and the strongest weapon for what you hit, also for Nuker, Hammer, VeinMiner and KillAura. Pulls tools from the main inventory, skips nearly broken ones (Save tools), switches back after manual use |
+| Render | Zoom | Smooth binocular zoom for cinematic shots, toggled with its key: the view eases to 2x-50x (Zoom slider), the mouse wheel zooms in and out, the mouse slows down to match |
+| Client | InfoHUD | Info panel under the watermark: XYZ, the same spot in the Nether/Overworld, facing, biome, FPS, in-game day and time (each line can be turned off) |
+| Movement | AntiVoid | Falling with nothing below you down to the bottom of the world catches you (Height: blocks you fall first) and you fly until you land; sneak to go down, no fall damage |
 
 ## Build
 
