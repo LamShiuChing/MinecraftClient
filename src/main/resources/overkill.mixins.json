@@ -9,7 +9,9 @@
 		"MinecraftMixin",
 		"SectionCompilerMixin",
 		"LightmapRenderStateExtractorMixin",
-		"MultiPlayerGameModeAccessor"
+		"MultiPlayerGameModeAccessor",
+		"MultiPlayerGameModeCriticalsMixin",
+		"ClientPacketListenerVelocityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
