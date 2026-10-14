@@ -15,10 +15,12 @@ import com.overkill.client.module.modules.AutoFarm;
 import com.overkill.client.module.modules.AutoFish;
 import com.overkill.client.module.modules.AutoMLG;
 import com.overkill.client.module.modules.AutoPortal;
+import com.overkill.client.module.modules.AutoShield;
 import com.overkill.client.module.modules.AutoSwap;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.AutoWalk;
+import com.overkill.client.module.modules.BedAura;
 import com.overkill.client.module.modules.BetterTooltips;
 import com.overkill.client.module.modules.BoatFly;
 import com.overkill.client.module.modules.BowAimbot;
@@ -26,6 +28,7 @@ import com.overkill.client.module.modules.ChestStealer;
 import com.overkill.client.module.modules.ClickGuiModule;
 import com.overkill.client.module.modules.ClickTP;
 import com.overkill.client.module.modules.Criticals;
+import com.overkill.client.module.modules.CrystalAura;
 import com.overkill.client.module.modules.DangerAlerts;
 import com.overkill.client.module.modules.ESP;
 import com.overkill.client.module.modules.ElytraFly;
@@ -161,7 +164,10 @@ public final class Modules {
 		new NoRender(),
 		new ShulkerPeek(),
 		new BetterTooltips(),
-		new AutoBreed()
+		new AutoBreed(),
+		new CrystalAura(),
+		new BedAura(),
+		new AutoShield()
 	);
 
 	private Modules() {
