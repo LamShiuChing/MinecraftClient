@@ -134,6 +134,9 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Render | Trajectories | While you hold a bow (the arc for the current draw, full power when not drawing), crossbow, trident, ender pearl, snowball, egg, splash/lingering potion or bottle o' enchanting: its flight path as a yellow line, with a box on the block or mob it would hit. Real 26.3 gravity and drag per projectile, plus your own movement like vanilla |
 | Render | Search | Boxes spawners, ancient debris, diamond ore (also deepslate), end portal frames and nether portals through walls within Range (16-128), one toggle each; the world looks normal (no XRay). Scans a few chunk sections a tick, skips sections that can't contain them and rescans a section when a block in it changes. The HUD shows how many it found |
 | Render | Breadcrumbs | A cyan line along where you walked (a point every half block, Length points), one trail per dimension, to find the way back in caves. Cleared when you turn it off |
+| Render | FreeLook | Toggle: third person camera that orbits you with the mouse while your body keeps facing (and walking) where it was, also for the server. Off: the old perspective and view are back. Turns Freecam off |
+| Render | CameraClip | The third person camera passes through blocks instead of being pushed in by walls; Distance (1-20, vanilla 4) sets how far back it sits |
+| Render | Ambience | Pick the time of day (Time 0-24000: 6000 noon, 12500 sunset, 18000 midnight) and the Weather (0 clear, 1 rain, 2 thunder) you see. Only on your screen: the world's real time and weather (and InfoHUD's time) don't change. Not in the End, which has no day or weather sky |
 
 ## Build
 

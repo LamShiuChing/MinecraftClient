@@ -53,7 +53,12 @@
 		"FallingBlockRendererNoRenderMixin",
 		"ItemStackShulkerPeekMixin",
 		"LivingEntityFastSwimMixin",
-		"ClientLevelSearchMixin"
+		"ClientLevelSearchMixin",
+		"EntityFreeLookMixin",
+		"CameraFreeLookMixin",
+		"CameraClipMixin",
+		"AttributeTrackSamplerAmbienceMixin",
+		"LevelAmbienceMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
