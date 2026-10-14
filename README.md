@@ -120,6 +120,8 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | World | AutoPortal | Turn it on: builds a nether portal frame (10 obsidian, no corners) in front of you from your inventory, 4 blocks per tick, lights it with flint and steel or a fire charge and turns off. About 3 ticks. With under 10 obsidian or no igniter it only says so in chat |
 | World | AirPlace | Right click with a block while the crosshair hits nothing: places it in mid-air Distance (2-5) blocks out; a white outline shows where |
 | World | LavaFiller | Fills lava source blocks within Range (Flowing: also flowing lava) with cobblestone, netherrack, dirt or cobbled deepslate from your inventory (each a toggle; never any other block), nearest first, 4 per tick |
+| Render | LightOverlay | A cross on every block within Range (8-32) where hostile mobs can spawn, by vanilla's own spawn check (glass, bottom slabs and the like never): red = no light at all, they spawn now; yellow = no block light but daylight, they spawn at night. A torch clears its area within a second. Hidden in RecordingMode |
+| Render | NoRender | Hides, only on screen: Particles (all), Explosions (the cloud and debris smoke; the blocks still break), Weather (rain, snow and splashes; it still rains), Totem (the pop-up animation; the totem still saves you), Boss bar, Falling blocks (the entity is still there). The vignette has its own vanilla option (Video Settings) |
 
 ## Build
 
