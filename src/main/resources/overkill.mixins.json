@@ -20,7 +20,14 @@
 		"CameraZoomMixin",
 		"MouseHandlerZoomMixin",
 		"LocalPlayerNoSlowMixin",
-		"EntityNoSlowMixin"
+		"EntityNoSlowMixin",
+		"CameraFreecamMixin",
+		"KeyboardInputFreecamMixin",
+		"EntityFreecamMixin",
+		"MouseHandlerFreecamMixin",
+		"GameRendererFreecamMixin",
+		"MinecraftFreecamMixin",
+		"MinecraftClickTPMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

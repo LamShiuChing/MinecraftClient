@@ -60,6 +60,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Movement | Spider | Walk into a wall to climb it like a ladder (speed slider) |
 | World | NoMiningPenalty | Mines at ground speed in the air (Air: flying, jumping, falling) and with your head underwater (Water; works once you've been in the world a little while, longer for very hard blocks) |
 | Player | AntiSuffocate | Breaks blocks that would suffocate you, and the block falling sand or gravel would land on to bury your head (with AutoTool's tool). Drops fall normally. A block that appears in your head at once (piston, teleport) can still hit once |
+| Render | Freecam | Fly the camera away from your body (WASD, jump/sneak for up/down, mouse to look, scroll for speed); the body stays where it is and doesn't click. Interact: aim and click from the camera (mine, open chests and doors, press buttons, hit mobs); for each click your body teleports next to the target and back, and waits there while a chest is open |
+| Movement | ClickTP | Right click with an empty hand on a block out of reach (up to Range blocks) to teleport on top of it. No fall damage |
+| Combat | TPAura | KillAura up to Range (5-60) blocks away: teleports next to each mob, hits it at full cooldown (Criticals and AutoTool apply) and teleports back in the same tick. Only mobs it can reach through open space (also the Ender Dragon's parts) |
 
 ## Build
 

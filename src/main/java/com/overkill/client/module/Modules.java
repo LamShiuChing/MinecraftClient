@@ -8,11 +8,13 @@ import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.ChestStealer;
 import com.overkill.client.module.modules.ClickGuiModule;
+import com.overkill.client.module.modules.ClickTP;
 import com.overkill.client.module.modules.Criticals;
 import com.overkill.client.module.modules.ESP;
 import com.overkill.client.module.modules.FastBreak;
 import com.overkill.client.module.modules.FastPlace;
 import com.overkill.client.module.modules.Fly;
+import com.overkill.client.module.modules.Freecam;
 import com.overkill.client.module.modules.Fullbright;
 import com.overkill.client.module.modules.Hammer;
 import com.overkill.client.module.modules.InfoHUD;
@@ -29,6 +31,7 @@ import com.overkill.client.module.modules.Sprint;
 import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
 import com.overkill.client.module.modules.StrongholdFinder;
+import com.overkill.client.module.modules.TPAura;
 import com.overkill.client.module.modules.VeinMiner;
 import com.overkill.client.module.modules.Velocity;
 import com.overkill.client.module.modules.WaterBreathing;
@@ -74,7 +77,10 @@ public final class Modules {
 		new NoSlow(),
 		new Spider(),
 		new NoMiningPenalty(),
-		new AntiSuffocate()
+		new AntiSuffocate(),
+		new Freecam(),
+		new ClickTP(),
+		new TPAura()
 	);
 
 	private Modules() {
