@@ -1,9 +1,12 @@
 package com.overkill.client.module;
 
 import com.overkill.client.module.modules.ClickGuiModule;
+import com.overkill.client.module.modules.ESP;
 import com.overkill.client.module.modules.Sprint;
 import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
+import com.overkill.client.module.modules.StrongholdFinder;
+import com.overkill.client.module.modules.XRay;
 import net.minecraft.client.Minecraft;
 
 import java.util.List;
@@ -14,7 +17,10 @@ public final class Modules {
 		new ClickGuiModule(),
 		new Sprint(),
 		new Step(),
-		new Stopwatch()
+		new Stopwatch(),
+		new XRay(),
+		new ESP(),
+		new StrongholdFinder()
 	);
 
 	private Modules() {

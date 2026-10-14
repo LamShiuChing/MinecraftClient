@@ -2,7 +2,13 @@
 	"required": true,
 	"package": "com.overkill.client.mixin",
 	"compatibilityLevel": "JAVA_25",
-	"client": ["KeyboardHandlerMixin"],
+	"client": [
+		"KeyboardHandlerMixin",
+		"BlockMixin",
+		"BlockModelLighterCacheMixin",
+		"MinecraftMixin",
+		"SectionCompilerMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	}
