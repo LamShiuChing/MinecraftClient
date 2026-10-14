@@ -71,6 +71,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Player | AutoMLG | Water bucket clutch: falling more than Distance (4-30) blocks onto solid ground, looks down, places a water bucket from your hotbar just before you land and picks the water back up. Not in the Nether (water evaporates) |
 | Player | AutoFish | With a fishing rod in hand: casts, reels in the moment a fish bites (the bobber's biting state from the server) and casts again after Recast delay ticks. Real vanilla fishing loot. Stops with 1 durability left so the rod never breaks |
 | World | AutoFarm | Harvests fully grown wheat, carrots, potatoes, beetroot, nether wart and cocoa within Range and replants each spot with seeds from your inventory (4 breaks or plantings per tick). Leaves young crops, melons, pumpkins and everything else alone. Drops fall normally |
+| Render | Tracers | Lines from the crosshair to every mob within Range blocks, through walls: hostiles red, passives green, dropped items yellow (Items toggle). Mobs behind you get a line off the screen edge their way |
+| Render | Nametags | Name and health over every mob and player, e.g. `Zombie 18/20 ❤`, through walls at any distance (Scale slider). Also the Ender Dragon |
+| Render | TrueSight | Invisible mobs show up see-through (potion of invisibility, witches), and barrier blocks show their marker like in creative |
 
 ## Build
 

@@ -30,7 +30,9 @@
 		"MinecraftClickTPMixin",
 		"LivingEntityTakeOffMixin",
 		"PlayerSafeWalkMixin",
-		"FishingHookAccessor"
+		"FishingHookAccessor",
+		"EntityTrueSightMixin",
+		"ClientLevelTrueSightMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

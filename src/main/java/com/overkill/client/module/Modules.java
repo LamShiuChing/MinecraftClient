@@ -26,6 +26,7 @@ import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.LongJump;
+import com.overkill.client.module.modules.Nametags;
 import com.overkill.client.module.modules.NoFall;
 import com.overkill.client.module.modules.NoMiningPenalty;
 import com.overkill.client.module.modules.NoSlow;
@@ -40,6 +41,8 @@ import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
 import com.overkill.client.module.modules.StrongholdFinder;
 import com.overkill.client.module.modules.TPAura;
+import com.overkill.client.module.modules.Tracers;
+import com.overkill.client.module.modules.TrueSight;
 import com.overkill.client.module.modules.VeinMiner;
 import com.overkill.client.module.modules.Velocity;
 import com.overkill.client.module.modules.WaterBreathing;
@@ -96,7 +99,10 @@ public final class Modules {
 		new Parkour(),
 		new AutoMLG(),
 		new AutoFish(),
-		new AutoFarm()
+		new AutoFarm(),
+		new Tracers(),
+		new Nametags(),
+		new TrueSight()
 	);
 
 	private Modules() {
