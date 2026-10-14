@@ -11,7 +11,9 @@
 		"LightmapRenderStateExtractorMixin",
 		"MultiPlayerGameModeAccessor",
 		"MultiPlayerGameModeCriticalsMixin",
-		"ClientPacketListenerVelocityMixin"
+		"ClientPacketListenerVelocityMixin",
+		"LiquidBlockMixin",
+		"MinecraftFastPlaceAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

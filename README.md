@@ -44,6 +44,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Combat | Criticals | Every melee hit (yours and KillAura's) is a critical hit, 1.5x damage, no fall damage |
 | Combat | Velocity | No knockback from hits and explosions (Horizontal / Vertical: % you still take) |
 | Player | AutoEat | Eats your best food when hunger drops to a threshold or health is low; golden apples only when low, never rotten flesh, spider eyes or other bad food |
+| Movement | Jesus | Walk on water and lava (Lava toggle); sneak to sink |
+| World | Scaffold | Places blocks from your inventory under your feet, so walking off an edge builds a bridge; Tower: hold jump standing still to pillar up. Full solid blocks only, never sand or gravel |
+| World | FastPlace | No delay between block placements and item uses while holding right click |
 
 ## Build
 

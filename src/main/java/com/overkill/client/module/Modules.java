@@ -6,11 +6,14 @@ import com.overkill.client.module.modules.ClickGuiModule;
 import com.overkill.client.module.modules.Criticals;
 import com.overkill.client.module.modules.ESP;
 import com.overkill.client.module.modules.FastBreak;
+import com.overkill.client.module.modules.FastPlace;
 import com.overkill.client.module.modules.Fly;
 import com.overkill.client.module.modules.Fullbright;
+import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.NoFall;
 import com.overkill.client.module.modules.Nuker;
+import com.overkill.client.module.modules.Scaffold;
 import com.overkill.client.module.modules.Speed;
 import com.overkill.client.module.modules.Sprint;
 import com.overkill.client.module.modules.Step;
@@ -42,7 +45,10 @@ public final class Modules {
 		new AutoTotem(),
 		new Criticals(),
 		new Velocity(),
-		new AutoEat()
+		new AutoEat(),
+		new Jesus(),
+		new Scaffold(),
+		new FastPlace()
 	);
 
 	private Modules() {
