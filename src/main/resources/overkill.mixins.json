@@ -29,7 +29,8 @@
 		"MinecraftFreecamMixin",
 		"MinecraftClickTPMixin",
 		"LivingEntityTakeOffMixin",
-		"PlayerSafeWalkMixin"
+		"PlayerSafeWalkMixin",
+		"FishingHookAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -69,6 +69,8 @@ Settings and keybinds save to `config/overkill.json`.
 | Movement | SafeWalk | Never walk off an edge: stops at edges like sneaking, but at full speed. Jumping off still works |
 | Movement | Parkour | Jumps at the very last moment before you walk off an edge, for max-distance jumps. Not while sneaking |
 | Player | AutoMLG | Water bucket clutch: falling more than Distance (4-30) blocks onto solid ground, looks down, places a water bucket from your hotbar just before you land and picks the water back up. Not in the Nether (water evaporates) |
+| Player | AutoFish | With a fishing rod in hand: casts, reels in the moment a fish bites (the bobber's biting state from the server) and casts again after Recast delay ticks. Real vanilla fishing loot. Stops with 1 durability left so the rod never breaks |
+| World | AutoFarm | Harvests fully grown wheat, carrots, potatoes, beetroot, nether wart and cocoa within Range and replants each spot with seeds from your inventory (4 breaks or plantings per tick). Leaves young crops, melons, pumpkins and everything else alone. Drops fall normally |
 
 ## Build
 
