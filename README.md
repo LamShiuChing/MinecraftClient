@@ -28,6 +28,10 @@ Settings and keybinds save to `config/overkill.json`.
 |---|---|---|
 | Movement | Sprint | Always sprint |
 | Movement | Step | Walk up blocks without jumping (height slider) |
+| Movement | Fly | Creative-style flight in survival (speed slider) |
+| Movement | Speed | Faster ground movement (multiplier slider) |
+| Movement | NoFall | No fall damage |
+| Render | Fullbright | Everything fully lit: caves, night, the Nether |
 | Client | ClickGUI | The menu (Right Shift) |
 | Client | Stopwatch | Real-time timer for speed episodes |
 
