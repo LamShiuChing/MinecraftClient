@@ -32,7 +32,10 @@
 		"PlayerSafeWalkMixin",
 		"FishingHookAccessor",
 		"EntityTrueSightMixin",
-		"ClientLevelTrueSightMixin"
+		"ClientLevelTrueSightMixin",
+		"LivingEntityElytraFlyMixin",
+		"AbstractBoatBoatFlyMixin",
+		"MinecraftTimerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

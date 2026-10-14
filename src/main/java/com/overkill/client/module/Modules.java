@@ -10,11 +10,13 @@ import com.overkill.client.module.modules.AutoFish;
 import com.overkill.client.module.modules.AutoMLG;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
+import com.overkill.client.module.modules.BoatFly;
 import com.overkill.client.module.modules.ChestStealer;
 import com.overkill.client.module.modules.ClickGuiModule;
 import com.overkill.client.module.modules.ClickTP;
 import com.overkill.client.module.modules.Criticals;
 import com.overkill.client.module.modules.ESP;
+import com.overkill.client.module.modules.ElytraFly;
 import com.overkill.client.module.modules.FastBreak;
 import com.overkill.client.module.modules.FastPlace;
 import com.overkill.client.module.modules.Fly;
@@ -41,6 +43,7 @@ import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
 import com.overkill.client.module.modules.StrongholdFinder;
 import com.overkill.client.module.modules.TPAura;
+import com.overkill.client.module.modules.Timer;
 import com.overkill.client.module.modules.Tracers;
 import com.overkill.client.module.modules.TrueSight;
 import com.overkill.client.module.modules.VeinMiner;
@@ -102,7 +105,10 @@ public final class Modules {
 		new AutoFarm(),
 		new Tracers(),
 		new Nametags(),
-		new TrueSight()
+		new TrueSight(),
+		new ElytraFly(),
+		new BoatFly(),
+		new Timer()
 	);
 
 	private Modules() {

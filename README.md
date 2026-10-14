@@ -74,6 +74,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | Tracers | Lines from the crosshair to every mob within Range blocks, through walls: hostiles red, passives green, dropped items yellow (Items toggle). Mobs behind you get a line off the screen edge their way |
 | Render | Nametags | Name and health over every mob and player, e.g. `Zombie 18/20 ❤`, through walls at any distance (Scale slider). Also the Ender Dragon |
 | Render | TrueSight | Invisible mobs show up see-through (potion of invisibility, witches), and barrier blocks show their marker like in creative |
+| Movement | ElytraFly | While gliding with an elytra (normal glide start), fly without rockets: look + WASD move at Speed (0.5-10 blocks/tick), jump/sneak go up/down, no keys hovers. The elytra wears out as in a normal glide |
+| Movement | BoatFly | The boat you ride flies: jump goes up, the sprint key down (sneak still gets out), W flies forward at Speed (A/D turn), no keys hovers. Getting out in the air is a fall without damage |
+| World | Timer | Your game ticks run Speed (0.1-5) times as fast: walking, jumping, flying. Server-side things stay normal (mobs, day time, eating, attack damage; mining past ~1.4x gets undone) |
 
 ## Build
 
