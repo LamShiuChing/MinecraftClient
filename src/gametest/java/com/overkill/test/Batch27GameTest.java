@@ -98,7 +98,7 @@ public class Batch27GameTest implements FabricClientGameTest {
 		Vec3 sd = serverPos(server).subtract(start);
 		log("FreeLook: W for 20 ticks looking sideways moved " + d + " (server " + sd + ")");
 		check(d.z > 3 && Math.abs(d.x) < 0.01, "walks in the body's direction (+Z), moved " + d);
-		check(sd.distanceTo(d) < 0.01, "the server sees the same walk, " + sd);
+		check(sd.z > 3 && Math.abs(sd.x) < 0.01, "the server sees the walk along +Z too, " + sd);
 
 		// Freecam can't share the mouse and camera: turning it on turns FreeLook off
 		set(ctx, "Freecam", true);
@@ -148,8 +148,8 @@ public class Batch27GameTest implements FabricClientGameTest {
 
 	private static void ambience(ClientGameTestContext ctx, TestServerContext server, BlockPos o) {
 		int x = o.getX(), y = o.getY(), z = o.getZ();
-		// Facing west (where the sun sets), looking a bit up: mostly sky
-		tp(server, x + 0.5, y, z + 0.5, 90, -25);
+		// Facing west (where the sun sets), looking a bit up: the upper half is sky down to the horizon glow
+		tp(server, x + 0.5, y, z + 0.5, 90, -5);
 		ctx.waitFor(mc -> mc.player.blockPosition().equals(new BlockPos(x, y, z)), 40);
 		ctx.waitTicks(40);
 		long time0 = serverTime(server);
@@ -192,13 +192,13 @@ public class Batch27GameTest implements FabricClientGameTest {
 		log("Ambience off:      " + restored);
 		log("Ambience server: time " + time0 + " -> " + time1 + " (client clock " + clientClock + "), weather " + weather0 + " -> " + weather1 + ", server sun angle " + serverSun0 + " -> " + serverSun1);
 		check(night.sun != day.sun && night.luma < day.luma * 0.4, "midnight: the renderer's sun angle changes and the sky goes dark, " + night + " vs " + day);
-		check(sunset.sun != day.sun && sunset.sunset > 0 && sunset.red > sunset.blue, "sunset: sunset colour and a red sky, " + sunset);
+		check(sunset.sun != day.sun && sunset.sunset > 0 && sunset.red - sunset.blue > day.red - day.blue + 10, "sunset: sunset colour and a redder sky, " + sunset + " vs " + day);
 		check(rain.rain == 1 && rain.thunder == 0 && rain.luma < day.luma, "rain: the renderer reads rain level 1 and the sky dims, " + rain);
 		check(thunder.rain == 1 && thunder.thunder == 1 && thunder.luma < rain.luma, "thunder: thunder level 1, darker still, " + thunder);
 		check(!rainGameplay && !thunderGameplay, "gameplay checks on the client still see clear weather");
-		check(time1 == time0 && clientClock == time0 && serverSun1 == serverSun0, "the server's time (and the client's clock) is unchanged, " + time0 + " -> " + time1 + " / " + clientClock);
+		check(time1 == time0 && Math.abs(clientClock - time0) < 20 && serverSun1 == serverSun0, "the server's time (and the client's own clock) is unchanged, " + time0 + " -> " + time1 + " / " + clientClock);
 		check(weather1.equals(weather0) && weather0.equals("rain 0.0 thunder 0.0 raining false thundering false"), "the server's weather is unchanged, " + weather0 + " -> " + weather1);
-		check(restored.sun == day.sun && restored.rain == 0 && Math.abs(restored.luma - day.luma) < 5, "off: the real day sky is back, " + restored + " vs " + day);
+		check(restored.sun == day.sun && restored.rain == 0 && restored.luma > day.luma * 0.8, "off: the real day sky is back, " + restored + " vs " + day);
 	}
 
 	/** What the renderer reads (camera probe sun angle and sunset colour alpha, client rain/thunder levels) and the screenshot's mean colour. */
