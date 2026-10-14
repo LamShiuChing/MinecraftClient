@@ -85,6 +85,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | AntiBlind | Hides what blocks your view, only on screen (the effects stay): Blindness (blindness and darkness fog, darkness flicker), Nausea (nausea and portal wobble), Overlays (pumpkin, fire, powder snow), Liquids (water and lava fog) |
 | Player | AutoSwap | When the held tool or weapon is down to Durability uses left (default 5), swaps in the best spare of the same kind from your inventory (pickaxe for pickaxe, more durable material first, then enchantments); with no spare it holds an empty hotbar slot (else a non-damageable item) and warns in chat. AutoTool never picks a tool at the threshold |
 | Player | InventorySort | Press its key: sorts the open chest, barrel or shulker box (key works with the screen open), else your main inventory (hotbar, armor and offhand stay). Blocks, tools, food, then the rest, by name; partial stacks merged. Normal clicks, nothing made or lost; bundles stay put |
+| Render | Waypoints | Mark places (base, portals, stronghold, the dragon fight): **B** (Add waypoint in Controls) adds one where you stand, **N** removes the nearest within 5 blocks. Name and distance show through walls; Overworld ones show in the Nether at x/8 z/8 and the other way round at x*8 z*8, marked [Overworld] / [Nether]. Auto portals marks both ends of every nether portal you take. Saved per world in `config/overkill-waypoints.json` |
+| Movement | AutoWalk | Keeps walking forward (sprints with Sprint) until you press forward or back; pauses while a menu is open |
+| Player | PortalGUI | Use your inventory, chat and other menus while standing in a nether portal; the portal works and takes as long as normal |
 
 ## Build
 

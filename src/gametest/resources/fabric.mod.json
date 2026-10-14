@@ -24,6 +24,7 @@
 			"com.overkill.test.Batch16GameTest",
 			"com.overkill.test.Batch17GameTest",
 			"com.overkill.test.Batch18GameTest",
+			"com.overkill.test.Batch22GameTest",
 			"com.overkill.test.Batch23GameTest"
 		]
 	}

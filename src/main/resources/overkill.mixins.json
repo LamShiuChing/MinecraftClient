@@ -44,7 +44,8 @@
 		"LightmapRenderStateExtractorAntiBlindMixin",
 		"LevelExtractorAntiBlindMixin",
 		"HudAntiBlindMixin",
-		"AbstractContainerScreenSortMixin"
+		"AbstractContainerScreenSortMixin",
+		"LocalPlayerPortalGUIMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
