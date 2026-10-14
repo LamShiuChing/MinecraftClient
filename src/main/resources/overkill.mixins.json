@@ -43,7 +43,8 @@
 		"MobEffectFogEnvironmentAntiBlindMixin",
 		"LightmapRenderStateExtractorAntiBlindMixin",
 		"LevelExtractorAntiBlindMixin",
-		"HudAntiBlindMixin"
+		"HudAntiBlindMixin",
+		"LocalPlayerPortalGUIMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

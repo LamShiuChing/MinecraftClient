@@ -83,6 +83,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | StorageESP | Boxes chests (orange), trapped chests (red), barrels (brown), shulker boxes (pink) and ender chests (cyan) through walls within Range blocks; Hoppers toggle. The HUD shows how many it found |
 | Render | NoHurtCam | No camera shake when you take damage (the damage itself is unchanged) |
 | Render | AntiBlind | Hides what blocks your view, only on screen (the effects stay): Blindness (blindness and darkness fog, darkness flicker), Nausea (nausea and portal wobble), Overlays (pumpkin, fire, powder snow), Liquids (water and lava fog) |
+| Render | Waypoints | Mark places (base, portals, stronghold, the dragon fight): **B** (Add waypoint in Controls) adds one where you stand, **N** removes the nearest within 5 blocks. Name and distance show through walls; Overworld ones show in the Nether at x/8 z/8 and the other way round at x*8 z*8, marked [Overworld] / [Nether]. Auto portals marks both ends of every nether portal you take. Saved per world in `config/overkill-waypoints.json` |
+| Movement | AutoWalk | Keeps walking forward (sprints with Sprint) until you press forward or back; pauses while a menu is open |
+| Player | PortalGUI | Use your inventory, chat and other menus while standing in a nether portal; the portal works and takes as long as normal |
 
 ## Build
 

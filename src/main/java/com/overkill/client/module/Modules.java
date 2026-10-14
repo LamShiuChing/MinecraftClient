@@ -12,6 +12,7 @@ import com.overkill.client.module.modules.AutoFish;
 import com.overkill.client.module.modules.AutoMLG;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
+import com.overkill.client.module.modules.AutoWalk;
 import com.overkill.client.module.modules.BoatFly;
 import com.overkill.client.module.modules.BowAimbot;
 import com.overkill.client.module.modules.ChestStealer;
@@ -38,6 +39,7 @@ import com.overkill.client.module.modules.NoMiningPenalty;
 import com.overkill.client.module.modules.NoSlow;
 import com.overkill.client.module.modules.Nuker;
 import com.overkill.client.module.modules.Parkour;
+import com.overkill.client.module.modules.PortalGUI;
 import com.overkill.client.module.modules.SafeWalk;
 import com.overkill.client.module.modules.Scaffold;
 import com.overkill.client.module.modules.Speed;
@@ -55,6 +57,7 @@ import com.overkill.client.module.modules.TrueSight;
 import com.overkill.client.module.modules.VeinMiner;
 import com.overkill.client.module.modules.Velocity;
 import com.overkill.client.module.modules.WaterBreathing;
+import com.overkill.client.module.modules.Waypoints;
 import com.overkill.client.module.modules.XRay;
 import com.overkill.client.module.modules.Zoom;
 import net.minecraft.client.Minecraft;
@@ -120,7 +123,10 @@ public final class Modules {
 		new BowAimbot(),
 		new StorageESP(),
 		new NoHurtCam(),
-		new AntiBlind()
+		new AntiBlind(),
+		new Waypoints(),
+		new AutoWalk(),
+		new PortalGUI()
 	);
 
 	private Modules() {
