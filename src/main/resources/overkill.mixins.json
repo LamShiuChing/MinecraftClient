@@ -52,7 +52,8 @@
 		"LocalPlayerNoRenderMixin",
 		"FallingBlockRendererNoRenderMixin",
 		"ItemStackShulkerPeekMixin",
-		"LivingEntityFastSwimMixin"
+		"LivingEntityFastSwimMixin",
+		"ClientLevelSearchMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

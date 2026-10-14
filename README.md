@@ -131,6 +131,9 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Movement | FastSwim | Swim Speed (1-5) times as fast in water, sprint-swimming or not; Lava: in lava too. Stacks with Depth Strider and Dolphin's Grace; works with Jesus (that's on the water, this is in it) |
 | Movement | EntitySpeed | The mob you ride and steer moves Speed (1-5) times as fast: horse, donkey, mule, camel, strider and pig (with their steering item), nautilus, happy ghast. Not boats (BoatFly) |
 | World | AutoTorch | Block light at your feet at Light (0-7, default 0: monsters can spawn) or below: places a torch from your inventory on the nearest floor or wall spot in reach, at least Spacing (default 6) blocks from any torch. Real torches only, swapped to the hotbar like Scaffold; never on ice or into water |
+| Render | Trajectories | While you hold a bow (the arc for the current draw, full power when not drawing), crossbow, trident, ender pearl, snowball, egg, splash/lingering potion or bottle o' enchanting: its flight path as a yellow line, with a box on the block or mob it would hit. Real 26.3 gravity and drag per projectile, plus your own movement like vanilla |
+| Render | Search | Boxes spawners, ancient debris, diamond ore (also deepslate), end portal frames and nether portals through walls within Range (16-128), one toggle each; the world looks normal (no XRay). Scans a few chunk sections a tick, skips sections that can't contain them and rescans a section when a block in it changes. The HUD shows how many it found |
+| Render | Breadcrumbs | A cyan line along where you walked (a point every half block, Length points), one trail per dimension, to find the way back in caves. Cleared when you turn it off |
 
 ## Build
 
