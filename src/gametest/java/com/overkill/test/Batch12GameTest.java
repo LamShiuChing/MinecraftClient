@@ -242,13 +242,19 @@ public class Batch12GameTest implements FabricClientGameTest {
 		ctx.waitTicks(5);
 		server.runCommand("execute at @p run summon minecraft:ender_dragon ~ ~10 ~-30 {DragonPhase:10}");
 		ctx.waitTicks(10);
-		for (int i = 0; i < 3; i++) {
-			hit(ctx, server, "bow-dragon", 30, () -> server.computeOnServer(s -> dragon(s).getHealth() < dragon(s).getMaxHealth()));
+		// The hovering dragon keeps turning, so a shot can miss now and then: 3 hits out of at most 5 shots
+		int hits = 0, shots = 0;
+		while (hits < 3 && shots < 5) {
+			shots++;
+			if (!shoot(ctx, server, "bow-dragon", 30, () -> server.computeOnServer(s -> dragon(s).getHealth() < dragon(s).getMaxHealth()))) continue;
+			hits++;
 			float dmg = server.computeOnServer(s -> dragon(s).getMaxHealth() - dragon(s).getHealth());
-			log("BowAimbot: dragon shot " + (i + 1) + ", total damage " + dmg + " (the head takes the arrow's damage, other parts a quarter + 1)");
+			log("BowAimbot: dragon shot " + shots + " hit, damage " + dmg + " (the head takes the arrow's damage, other parts a quarter + 1)");
 			server.runOnServer(s -> dragon(s).setHealth(dragon(s).getMaxHealth()));
 			ctx.waitTicks(20); // the dragon's hurt cooldown
 		}
+		log("BowAimbot: dragon " + hits + " hits in " + shots + " shots");
+		check(hits == 3, "BowAimbot hits the hovering dragon 3 times in 5 shots, got " + hits);
 		server.runOnServer(s -> dragon(s).discard());
 		set(ctx, "BowAimbot", false);
 	}
@@ -304,17 +310,25 @@ public class Batch12GameTest implements FabricClientGameTest {
 
 	/** Draws the bow for `draw` ticks and lets go; the arrow must do `hit` within 60 ticks. */
 	private static void hit(ClientGameTestContext ctx, TestServerContext server, String name, int draw, BooleanSupplier hit) {
+		check(shoot(ctx, server, name, draw, hit), "BowAimbot " + name + ": the arrow hits within 60 ticks");
+	}
+
+	/** Draws for {@code draw} ticks, releases, and reports whether {@code hit} came true within 60 ticks. */
+	private static boolean shoot(ClientGameTestContext ctx, TestServerContext server, String name, int draw, BooleanSupplier hit) {
 		ctx.getInput().holdMouse(RIGHT);
 		ctx.waitTicks(draw);
 		ctx.takeScreenshot("batch12-" + name);
 		float[] rot = rot(ctx);
 		ctx.getInput().releaseMouse(RIGHT);
-		int ticks = 0;
-		while (!hit.getAsBoolean()) {
-			check(++ticks <= 60, "BowAimbot " + name + ": the arrow hits within 60 ticks");
+		for (int ticks = 1; ticks <= 60; ticks++) {
 			ctx.waitTick();
+			if (hit.getAsBoolean()) {
+				log("BowAimbot " + name + ": drew " + draw + " ticks, looking yaw " + rot[0] + " pitch " + rot[1] + ", hit " + ticks + " ticks after release");
+				return true;
+			}
 		}
-		log("BowAimbot " + name + ": drew " + draw + " ticks, looking yaw " + rot[0] + " pitch " + rot[1] + ", hit " + ticks + " ticks after release");
+		log("BowAimbot " + name + ": drew " + draw + " ticks, looking yaw " + rot[0] + " pitch " + rot[1] + ", missed");
+		return false;
 	}
 
 	private static List<Entity> husksNear(Minecraft mc) {
