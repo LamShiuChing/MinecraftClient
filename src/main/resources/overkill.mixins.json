@@ -28,7 +28,8 @@
 		"GameRendererFreecamMixin",
 		"MinecraftFreecamMixin",
 		"MinecraftClickTPMixin",
-		"LivingEntityTakeOffMixin"
+		"LivingEntityTakeOffMixin",
+		"PlayerSafeWalkMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

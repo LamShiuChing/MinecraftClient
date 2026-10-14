@@ -66,6 +66,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Movement | HighJump | Every jump tops out Height (1-30) blocks up. No fall damage from its jumps, even without NoFall |
 | Movement | AirJump | Press jump in mid-air to jump again, as often as you like; Hold: keep jump held to climb a staircase of jumps. No fall damage from its jumps |
 | Movement | LongJump | Sprint-jumps take off Boost (1-10) times as fast, once per jump (Boost 5: about 3x as far). Not while you can fly or in water |
+| Movement | SafeWalk | Never walk off an edge: stops at edges like sneaking, but at full speed. Jumping off still works |
+| Movement | Parkour | Jumps at the very last moment before you walk off an edge, for max-distance jumps. Not while sneaking |
+| Player | AutoMLG | Water bucket clutch: falling more than Distance (4-30) blocks onto solid ground, looks down, places a water bucket from your hotbar just before you land and picks the water back up. Not in the Nether (water evaporates) |
 
 ## Build
 

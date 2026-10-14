@@ -5,6 +5,7 @@ import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
 import com.overkill.client.module.modules.AutoArmor;
 import com.overkill.client.module.modules.AutoEat;
+import com.overkill.client.module.modules.AutoMLG;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.ChestStealer;
@@ -27,6 +28,8 @@ import com.overkill.client.module.modules.NoFall;
 import com.overkill.client.module.modules.NoMiningPenalty;
 import com.overkill.client.module.modules.NoSlow;
 import com.overkill.client.module.modules.Nuker;
+import com.overkill.client.module.modules.Parkour;
+import com.overkill.client.module.modules.SafeWalk;
 import com.overkill.client.module.modules.Scaffold;
 import com.overkill.client.module.modules.Speed;
 import com.overkill.client.module.modules.Spider;
@@ -86,7 +89,10 @@ public final class Modules {
 		new TPAura(),
 		new HighJump(),
 		new AirJump(),
-		new LongJump()
+		new LongJump(),
+		new SafeWalk(),
+		new Parkour(),
+		new AutoMLG()
 	);
 
 	private Modules() {
