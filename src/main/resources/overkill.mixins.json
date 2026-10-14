@@ -45,7 +45,8 @@
 		"LevelExtractorAntiBlindMixin",
 		"HudAntiBlindMixin",
 		"AbstractContainerScreenSortMixin",
-		"LocalPlayerPortalGUIMixin"
+		"LocalPlayerPortalGUIMixin",
+		"LivingEntityFastSwimMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

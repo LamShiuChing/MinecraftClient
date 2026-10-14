@@ -117,6 +117,9 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Client | RecordingMode | F6: a clean frame for recording. Hides InfoHUD, ArmorHUD, TargetHUD, Tracers, Nametags and toasts; Hide vanilla also hides the vanilla HUD (hotbar, hearts, crosshair, chat, boss bar...). Keeps the watermark, module list and Stopwatch (rules 6 and 7) |
 | Player | LowHealth | Health below Hearts (default 4): a warning bell (Sound) and a red glow pulsing at the screen edges until you heal. Only warns |
 | Player | DangerAlerts | Big warning above the crosshair and a ping (once per danger, at most every 3 s) for: Lava up to 2 blocks ahead or below you while falling; a Fall that would kill you or deal Fall warn HP (not with NoFall, or AutoMLG with a water bucket; armor and potions are not counted, so it warns early); a Creeper within 5 blocks (7 while hissing); the Void below you (not with AntiVoid). Only warns |
+| Movement | FastSwim | Swim Speed (1-5) times as fast in water, sprint-swimming or not; Lava: in lava too. Stacks with Depth Strider and Dolphin's Grace; works with Jesus (that's on the water, this is in it) |
+| Movement | EntitySpeed | The mob you ride and steer moves Speed (1-5) times as fast: horse, donkey, mule, camel, strider and pig (with their steering item), nautilus, happy ghast. Not boats (BoatFly) |
+| World | AutoTorch | Block light at your feet at Light (0-7, default 0: monsters can spawn) or below: places a torch from your inventory on the nearest floor or wall spot in reach, at least Spacing (default 6) blocks from any torch. Real torches only, swapped to the hotbar like Scaffold; never on ice or into water |
 
 ## Build
 

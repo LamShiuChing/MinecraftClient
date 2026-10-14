@@ -14,6 +14,7 @@ import com.overkill.client.module.modules.AutoFish;
 import com.overkill.client.module.modules.AutoMLG;
 import com.overkill.client.module.modules.AutoSwap;
 import com.overkill.client.module.modules.AutoTool;
+import com.overkill.client.module.modules.AutoTorch;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.AutoWalk;
 import com.overkill.client.module.modules.BoatFly;
@@ -25,8 +26,10 @@ import com.overkill.client.module.modules.Criticals;
 import com.overkill.client.module.modules.DangerAlerts;
 import com.overkill.client.module.modules.ESP;
 import com.overkill.client.module.modules.ElytraFly;
+import com.overkill.client.module.modules.EntitySpeed;
 import com.overkill.client.module.modules.FastBreak;
 import com.overkill.client.module.modules.FastPlace;
+import com.overkill.client.module.modules.FastSwim;
 import com.overkill.client.module.modules.Fly;
 import com.overkill.client.module.modules.Freecam;
 import com.overkill.client.module.modules.Fullbright;
@@ -145,7 +148,10 @@ public final class Modules {
 		new TargetHUD(),
 		new RecordingMode(),
 		new LowHealth(),
-		new DangerAlerts()
+		new DangerAlerts(),
+		new FastSwim(),
+		new EntitySpeed(),
+		new AutoTorch()
 	);
 
 	private Modules() {
