@@ -47,6 +47,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Movement | Jesus | Walk on water and lava (Lava toggle); sneak to sink |
 | World | Scaffold | Places blocks from your inventory under your feet, so walking off an edge builds a bridge; Tower: hold jump standing still to pillar up. Full solid blocks only, never sand or gravel |
 | World | FastPlace | No delay between block placements and item uses while holding right click |
+| World | Hammer | Mining a block also breaks a flat 3x3 or 5x5 around it in the mined face's plane: blocks your tool is right for, or instant ones. Drops fall normally |
+| World | VeinMiner | Mining an ore or a log also breaks every connected block of the same kind, up to Max (ores, logs = tree feller). Drops fall normally |
+| Player | AutoTool | Switches to the best tool for the block you mine (one that gets drops first) and the strongest weapon for what you hit, also for Nuker, Hammer, VeinMiner and KillAura. Pulls tools from the main inventory, skips nearly broken ones (Save tools), switches back after manual use |
 
 ## Build
 

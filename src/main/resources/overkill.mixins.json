@@ -13,7 +13,10 @@
 		"MultiPlayerGameModeCriticalsMixin",
 		"ClientPacketListenerVelocityMixin",
 		"LiquidBlockMixin",
-		"MinecraftFastPlaceAccessor"
+		"MinecraftFastPlaceAccessor",
+		"MultiPlayerGameModeMiningMixin",
+		"ClientLevelAccessor",
+		"BlockStatePredictionHandlerAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -1,6 +1,7 @@
 package com.overkill.client.module;
 
 import com.overkill.client.module.modules.AutoEat;
+import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.ClickGuiModule;
 import com.overkill.client.module.modules.Criticals;
@@ -9,6 +10,7 @@ import com.overkill.client.module.modules.FastBreak;
 import com.overkill.client.module.modules.FastPlace;
 import com.overkill.client.module.modules.Fly;
 import com.overkill.client.module.modules.Fullbright;
+import com.overkill.client.module.modules.Hammer;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.NoFall;
@@ -19,6 +21,7 @@ import com.overkill.client.module.modules.Sprint;
 import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
 import com.overkill.client.module.modules.StrongholdFinder;
+import com.overkill.client.module.modules.VeinMiner;
 import com.overkill.client.module.modules.Velocity;
 import com.overkill.client.module.modules.XRay;
 import net.minecraft.client.Minecraft;
@@ -48,7 +51,10 @@ public final class Modules {
 		new AutoEat(),
 		new Jesus(),
 		new Scaffold(),
-		new FastPlace()
+		new FastPlace(),
+		new Hammer(),
+		new VeinMiner(),
+		new AutoTool()
 	);
 
 	private Modules() {

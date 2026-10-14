@@ -1,26 +1,18 @@
 package com.overkill.client.module.modules;
 
-import com.overkill.client.mixin.MultiPlayerGameModeAccessor;
 import com.overkill.client.module.Category;
 import com.overkill.client.module.Module;
 import com.overkill.client.setting.BoolSetting;
 import com.overkill.client.setting.NumberSetting;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Nuker extends Module {
 	// Server rejects breaks further than block reach (4.5) + 1 from the eyes
 	private final NumberSetting range = add(new NumberSetting("Range", 4.5, 1, 5.5, 0.5));
 	private final BoolSetting flatten = add(new BoolSetting("Flatten", true));
-	/** Blocks sent in the last few ticks: the server acks a break a tick before doing it, so they briefly reappear client-side. */
-	private final Map<BlockPos, Integer> recent = new HashMap<>();
-	private int ticks;
 
 	public Nuker() {
 		super("Nuker", "Breaks every block around you, drops fall normally. Flatten: only at or above your feet.", Category.WORLD);
@@ -34,8 +26,6 @@ public class Nuker extends Module {
 	@Override
 	public void onTick() {
 		LocalPlayer p = mc.player;
-		int now = ++ticks;
-		recent.values().removeIf(t -> now - t > 10);
 		Vec3 eye = p.getEyePosition();
 		double r = range.get();
 		BlockPos hard = null;
@@ -47,29 +37,12 @@ public class Nuker extends Module {
 			if (state.isAir() || state.liquid()) continue;
 			float perTick = state.getDestroyProgress(p, mc.level, pos); // 0 for bedrock and other unbreakables
 			if (perTick >= 1) {
-				mc.gameMode.startDestroyBlock(pos, Direction.UP); // insta-mine: the server allows any number per tick
-			} else if (perTick * p.tickCount >= 2 && dist < hardDist && !recent.containsKey(pos)) { // tickCount ~ server start tick, see breakNow
+				Breaker.breakBlock(pos); // insta-mine: any number per tick
+			} else if (Breaker.canFinish(perTick) && dist < hardDist && !Breaker.waiting(pos)) {
 				hard = pos.immutable();
 				hardDist = dist;
 			}
 		}
-		if (hard == null) return;
-		recent.put(hard, now);
-		breakNow(hard);
-	}
-
-	/**
-	 * Start and finish breaking in the same tick. The server sees the finish too early and turns it into a
-	 * "delayed destroy", which in 26.3 checks progress * (server tick the break started + 1) instead of the
-	 * elapsed ticks, so it completes on the next server tick. Only one can be pending at a time: one block per tick.
-	 * A pending one that can never complete blocks the rest, hence the tickCount check (with a 2x margin) above.
-	 */
-	private void breakNow(BlockPos pos) {
-		MultiPlayerGameModeAccessor gm = (MultiPlayerGameModeAccessor) mc.gameMode;
-		mc.gameMode.startDestroyBlock(pos, Direction.UP);
-		gm.overkill$setDestroyDelay(0);
-		gm.overkill$setDestroyProgress(1);
-		mc.gameMode.continueDestroyBlock(pos, Direction.UP);
-		gm.overkill$setDestroyDelay(0);
+		if (hard != null) Breaker.breakBlock(hard); // one per tick
 	}
 }

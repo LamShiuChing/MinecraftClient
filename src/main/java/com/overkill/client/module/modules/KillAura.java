@@ -46,6 +46,7 @@ public class KillAura extends Module {
 		mc.level.getEntities(p, p.getBoundingBox().inflate(range.get()), e -> isTarget(e) && e.getBoundingBox().distanceToSqr(eye) <= r2).stream()
 			.min(Comparator.comparingDouble(e -> e.getBoundingBox().distanceToSqr(eye)))
 			.ifPresent(target -> {
+				if (AutoTool.forEntity()) return; // switched weapon: hit next tick, when the server counts its damage
 				// Same calls as a vanilla left click (Minecraft.startAttack)
 				mc.gameMode.attack(p, target);
 				p.swing(InteractionHand.MAIN_HAND, weapon.getAttackAnimation(), false);
