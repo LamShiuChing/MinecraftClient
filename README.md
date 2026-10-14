@@ -37,6 +37,10 @@ Settings and keybinds save to `config/overkill.json`.
 | World | StrongholdFinder | Throw two Eyes of Ender 50+ blocks apart, shows the stronghold X/Z and distance |
 | Client | ClickGUI | The menu (Right Shift) |
 | Client | Stopwatch | Real-time timer for speed episodes |
+| Combat | KillAura | Attacks nearby mobs (range, hostiles, passives, end crystals, wait for full cooldown); hits the Ender Dragon through its body parts |
+| World | Nuker | Breaks every block around you (range, Flatten = only at or above your feet); insta-mineable blocks all at once, others one per tick. Drops fall normally |
+| World | FastBreak | Mines about 30% faster (the server accepts a break at 70% progress) with no pause between blocks |
+| Combat | AutoTotem | Moves a Totem of Undying from your inventory to your offhand |
 
 ## Build
 
