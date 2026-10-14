@@ -22,6 +22,10 @@ An open-source, **singleplayer-only** Fabric client for vanilla survival, built 
 
 Settings and keybinds save to `config/overkill.json`.
 
+**HUD editor:** click HudEditor (Client) in the menu, then drag the watermark, module list, InfoHUD, Stopwatch, ArmorHUD and TargetHUD anywhere. They snap to the screen edges and centre and stick to the nearest corner (or the centre), so the layout survives a window resize. Right click one to reset it, Esc when done. Positions save to `config/overkill-hud.json`.
+
+**RecordingMode (F6)** hides the optional HUD for a clean frame, but never the watermark and module list (rule 6) or the Stopwatch (rule 7).
+
 ## Modules
 
 | Category | Module | What it does |
@@ -83,6 +87,10 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | StorageESP | Boxes chests (orange), trapped chests (red), barrels (brown), shulker boxes (pink) and ender chests (cyan) through walls within Range blocks; Hoppers toggle. The HUD shows how many it found |
 | Render | NoHurtCam | No camera shake when you take damage (the damage itself is unchanged) |
 | Render | AntiBlind | Hides what blocks your view, only on screen (the effects stay): Blindness (blindness and darkness fog, darkness flicker), Nausea (nausea and portal wobble), Overlays (pumpkin, fire, powder snow), Liquids (water and lava fog) |
+| Client | HudEditor | Opens the HUD editor (see above): drag the HUD elements anywhere, right click resets one |
+| Render | ArmorHUD | Your armor and main/offhand items with vanilla durability bars and the uses left; an item under Warn % (default 10) turns red and blinks |
+| Combat | TargetHUD | Panel with the name, an animated health bar, HP and armor of the mob you fight: the last one you (or KillAura, TriggerBot, TPAura) hit, else the one you look at within 6 blocks. Works on the Ender Dragon; fades out 3 s after combat |
+| Client | RecordingMode | F6: a clean frame for recording. Hides InfoHUD, ArmorHUD, TargetHUD, Tracers and Nametags; Hide vanilla also hides the vanilla HUD (hotbar, hearts, crosshair, chat, boss bar...). Keeps the watermark, module list and Stopwatch (rules 6 and 7) |
 
 ## Build
 

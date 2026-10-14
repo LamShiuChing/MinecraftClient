@@ -5,6 +5,7 @@ import com.overkill.client.module.modules.AirJump;
 import com.overkill.client.module.modules.AntiBlind;
 import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
+import com.overkill.client.module.modules.ArmorHUD;
 import com.overkill.client.module.modules.AutoArmor;
 import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoFarm;
@@ -26,6 +27,7 @@ import com.overkill.client.module.modules.Fly;
 import com.overkill.client.module.modules.Freecam;
 import com.overkill.client.module.modules.Fullbright;
 import com.overkill.client.module.modules.Hammer;
+import com.overkill.client.module.modules.HudEditorModule;
 import com.overkill.client.module.modules.HighJump;
 import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.Jesus;
@@ -38,6 +40,7 @@ import com.overkill.client.module.modules.NoMiningPenalty;
 import com.overkill.client.module.modules.NoSlow;
 import com.overkill.client.module.modules.Nuker;
 import com.overkill.client.module.modules.Parkour;
+import com.overkill.client.module.modules.RecordingMode;
 import com.overkill.client.module.modules.SafeWalk;
 import com.overkill.client.module.modules.Scaffold;
 import com.overkill.client.module.modules.Speed;
@@ -48,6 +51,7 @@ import com.overkill.client.module.modules.Stopwatch;
 import com.overkill.client.module.modules.StorageESP;
 import com.overkill.client.module.modules.StrongholdFinder;
 import com.overkill.client.module.modules.TPAura;
+import com.overkill.client.module.modules.TargetHUD;
 import com.overkill.client.module.modules.Timer;
 import com.overkill.client.module.modules.Tracers;
 import com.overkill.client.module.modules.TriggerBot;
@@ -120,7 +124,11 @@ public final class Modules {
 		new BowAimbot(),
 		new StorageESP(),
 		new NoHurtCam(),
-		new AntiBlind()
+		new AntiBlind(),
+		new HudEditorModule(),
+		new ArmorHUD(),
+		new TargetHUD(),
+		new RecordingMode()
 	);
 
 	private Modules() {
