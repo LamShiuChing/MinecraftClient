@@ -5,6 +5,7 @@ import com.overkill.client.module.modules.AntiVoid;
 import com.overkill.client.module.modules.AutoArmor;
 import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoTool;
+import com.overkill.client.module.modules.AutoSwap;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.ChestStealer;
 import com.overkill.client.module.modules.ClickGuiModule;
@@ -17,6 +18,7 @@ import com.overkill.client.module.modules.Fly;
 import com.overkill.client.module.modules.Freecam;
 import com.overkill.client.module.modules.Fullbright;
 import com.overkill.client.module.modules.Hammer;
+import com.overkill.client.module.modules.InventorySort;
 import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
@@ -80,7 +82,9 @@ public final class Modules {
 		new AntiSuffocate(),
 		new Freecam(),
 		new ClickTP(),
-		new TPAura()
+		new TPAura(),
+		new AutoSwap(),
+		new InventorySort()
 	);
 
 	private Modules() {

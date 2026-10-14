@@ -63,6 +63,8 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | Freecam | Fly the camera away from your body (WASD, jump/sneak for up/down, mouse to look, scroll for speed); the body stays where it is and doesn't click. Interact: aim and click from the camera (mine, open chests and doors, press buttons, hit mobs); for each click your body teleports next to the target and back, and waits there while a chest is open |
 | Movement | ClickTP | Right click with an empty hand on a block out of reach (up to Range blocks) to teleport on top of it. No fall damage |
 | Combat | TPAura | KillAura up to Range (5-60) blocks away: teleports next to each mob, hits it at full cooldown (Criticals and AutoTool apply) and teleports back in the same tick. Only mobs it can reach through open space (also the Ender Dragon's parts) |
+| Player | AutoSwap | When the held tool or weapon is down to Durability uses left (default 5), swaps in the best spare of the same kind from your inventory (pickaxe for pickaxe, more durable material first, then enchantments); with no spare it holds an empty hotbar slot (else a non-damageable item) and warns in chat. AutoTool never picks a tool at the threshold |
+| Player | InventorySort | Press its key: sorts the open chest, barrel or shulker box (key works with the screen open), else your main inventory (hotbar, armor and offhand stay). Blocks, tools, food, then the rest, by name; partial stacks merged. Normal clicks, nothing made or lost; bundles stay put |
 
 ## Build
 

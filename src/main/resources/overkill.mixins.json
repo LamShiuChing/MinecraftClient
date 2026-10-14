@@ -27,7 +27,8 @@
 		"MouseHandlerFreecamMixin",
 		"GameRendererFreecamMixin",
 		"MinecraftFreecamMixin",
-		"MinecraftClickTPMixin"
+		"MinecraftClickTPMixin",
+		"AbstractContainerScreenSortMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
