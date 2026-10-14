@@ -9,10 +9,13 @@
 			"com.overkill.test.Batch1GameTest",
 			"com.overkill.test.Batch2GameTest",
 			"com.overkill.test.Batch3GameTest",
+			"com.overkill.test.Batch4GameTest",
 			"com.overkill.test.Batch5GameTest",
 			"com.overkill.test.Batch6GameTest",
-			"com.overkill.test.Batch4GameTest",
-			"com.overkill.test.Batch9GameTest"
+			"com.overkill.test.Batch7GameTest",
+			"com.overkill.test.Batch8GameTest",
+			"com.overkill.test.Batch9GameTest",
+			"com.overkill.test.Batch11GameTest"
 		]
 	}
 }
