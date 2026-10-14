@@ -63,6 +63,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | Freecam | Fly the camera away from your body (WASD, jump/sneak for up/down, mouse to look, scroll for speed); the body stays where it is and doesn't click. Interact: aim and click from the camera (mine, open chests and doors, press buttons, hit mobs); for each click your body teleports next to the target and back, and waits there while a chest is open |
 | Movement | ClickTP | Right click with an empty hand on a block out of reach (up to Range blocks) to teleport on top of it. No fall damage |
 | Combat | TPAura | KillAura up to Range (5-60) blocks away: teleports next to each mob, hits it at full cooldown (Criticals and AutoTool apply) and teleports back in the same tick. Only mobs it can reach through open space (also the Ender Dragon's parts) |
+| Movement | ElytraFly | While gliding with an elytra (normal glide start), fly without rockets: look + WASD move at Speed (0.5-10 blocks/tick), jump/sneak go up/down, no keys hovers. The elytra wears out as in a normal glide |
+| Movement | BoatFly | The boat you ride flies: jump goes up, the sprint key down (sneak still gets out), W flies forward at Speed (A/D turn), no keys hovers. Getting out in the air is a fall without damage |
+| World | Timer | Your game ticks run Speed (0.1-5) times as fast: walking, jumping, flying. Server-side things stay normal (mobs, day time, eating, attack damage; mining past ~1.4x gets undone) |
 
 ## Build
 

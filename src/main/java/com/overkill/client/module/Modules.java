@@ -6,11 +6,13 @@ import com.overkill.client.module.modules.AutoArmor;
 import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
+import com.overkill.client.module.modules.BoatFly;
 import com.overkill.client.module.modules.ChestStealer;
 import com.overkill.client.module.modules.ClickGuiModule;
 import com.overkill.client.module.modules.ClickTP;
 import com.overkill.client.module.modules.Criticals;
 import com.overkill.client.module.modules.ESP;
+import com.overkill.client.module.modules.ElytraFly;
 import com.overkill.client.module.modules.FastBreak;
 import com.overkill.client.module.modules.FastPlace;
 import com.overkill.client.module.modules.Fly;
@@ -32,6 +34,7 @@ import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
 import com.overkill.client.module.modules.StrongholdFinder;
 import com.overkill.client.module.modules.TPAura;
+import com.overkill.client.module.modules.Timer;
 import com.overkill.client.module.modules.VeinMiner;
 import com.overkill.client.module.modules.Velocity;
 import com.overkill.client.module.modules.WaterBreathing;
@@ -80,7 +83,10 @@ public final class Modules {
 		new AntiSuffocate(),
 		new Freecam(),
 		new ClickTP(),
-		new TPAura()
+		new TPAura(),
+		new ElytraFly(),
+		new BoatFly(),
+		new Timer()
 	);
 
 	private Modules() {
