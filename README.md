@@ -22,6 +22,20 @@ An open-source, **singleplayer-only** Fabric client for vanilla survival, built 
 
 Settings and keybinds save to `config/overkill.json`.
 
+### Using the GUI
+
+| Input | Action |
+|---|---|
+| Type | Search modules by name; panels with no match hide. **Backspace** edits, **Esc** clears the search, a second **Esc** closes |
+| Hover a module | Its description |
+| Left click / drag a number setting | Set it like a slider |
+| Scroll over a number setting | Change it by a tenth of its range, hold **Shift** for one step |
+| Click a number's value (right side) | Type an exact value, **Enter** applies, **Esc** cancels |
+| Right click a setting | Reset it to its default |
+| Middle click a module | Reset all its settings to default (it stays on or off, the keybind stays) |
+
+Panel positions and collapsed panels save to `config/overkill-gui.json`.
+
 ## Modules
 
 | Category | Module | What it does |

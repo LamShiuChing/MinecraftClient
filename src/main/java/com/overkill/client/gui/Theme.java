@@ -4,7 +4,8 @@ public final class Theme {
 	public static final int ACCENT = 0xFFE0402A;
 	public static final int ACCENT_DARK = 0xFF8E2416;
 	public static final int PANEL = 0xE0141418;
-	public static final int ROW_HOVER = 0xE0262630;
+	/** Drawn over a hovered row, faded in and out. */
+	public static final int HOVER = 0x30FFFFFF;
 	public static final int SETTING = 0xE01C1C22;
 	public static final int TEXT = 0xFFFFFFFF;
 	public static final int TEXT_DIM = 0xFFA0A0A8;
