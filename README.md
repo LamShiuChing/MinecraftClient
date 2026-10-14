@@ -117,6 +117,9 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Client | RecordingMode | F6: a clean frame for recording. Hides InfoHUD, ArmorHUD, TargetHUD, Tracers, Nametags and toasts; Hide vanilla also hides the vanilla HUD (hotbar, hearts, crosshair, chat, boss bar...). Keeps the watermark, module list and Stopwatch (rules 6 and 7) |
 | Player | LowHealth | Health below Hearts (default 4): a warning bell (Sound) and a red glow pulsing at the screen edges until you heal. Only warns |
 | Player | DangerAlerts | Big warning above the crosshair and a ping (once per danger, at most every 3 s) for: Lava up to 2 blocks ahead or below you while falling; a Fall that would kill you or deal Fall warn HP (not with NoFall, or AutoMLG with a water bucket; armor and potions are not counted, so it warns early); a Creeper within 5 blocks (7 while hissing); the Void below you (not with AntiVoid). Only warns |
+| World | AutoPortal | Turn it on: builds a nether portal frame (10 obsidian, no corners) in front of you from your inventory, 4 blocks per tick, lights it with flint and steel or a fire charge and turns off. About 3 ticks. With under 10 obsidian or no igniter it only says so in chat |
+| World | AirPlace | Right click with a block while the crosshair hits nothing: places it in mid-air Distance (2-5) blocks out; a white outline shows where |
+| World | LavaFiller | Fills lava source blocks within Range (Flowing: also flowing lava) with cobblestone, netherrack, dirt or cobbled deepslate from your inventory (each a toggle; never any other block), nearest first, 4 per tick |
 
 ## Build
 
