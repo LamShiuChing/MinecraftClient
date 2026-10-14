@@ -117,6 +117,8 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Client | RecordingMode | F6: a clean frame for recording. Hides InfoHUD, ArmorHUD, TargetHUD, Tracers, Nametags and toasts; Hide vanilla also hides the vanilla HUD (hotbar, hearts, crosshair, chat, boss bar...). Keeps the watermark, module list and Stopwatch (rules 6 and 7) |
 | Player | LowHealth | Health below Hearts (default 4): a warning bell (Sound) and a red glow pulsing at the screen edges until you heal. Only warns |
 | Player | DangerAlerts | Big warning above the crosshair and a ping (once per danger, at most every 3 s) for: Lava up to 2 blocks ahead or below you while falling; a Fall that would kill you or deal Fall warn HP (not with NoFall, or AutoMLG with a water bucket; armor and potions are not counted, so it warns early); a Creeper within 5 blocks (7 while hissing); the Void below you (not with AntiVoid). Only warns |
+| Render | LightOverlay | A cross on every block within Range (8-32) where hostile mobs can spawn, by vanilla's own spawn check (glass, bottom slabs and the like never): red = no light at all, they spawn now; yellow = no block light but daylight, they spawn at night. A torch clears its area within a second. Hidden in RecordingMode |
+| Render | NoRender | Hides, only on screen: Particles (all), Explosions (the cloud and debris smoke; the blocks still break), Weather (rain, snow and splashes; it still rains), Totem (the pop-up animation; the totem still saves you), Boss bar, Falling blocks (the entity is still there). The vignette has its own vanilla option (Video Settings) |
 
 ## Build
 

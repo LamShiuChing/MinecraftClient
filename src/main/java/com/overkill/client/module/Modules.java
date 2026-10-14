@@ -37,12 +37,14 @@ import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.InventorySort;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
+import com.overkill.client.module.modules.LightOverlay;
 import com.overkill.client.module.modules.LongJump;
 import com.overkill.client.module.modules.LowHealth;
 import com.overkill.client.module.modules.Nametags;
 import com.overkill.client.module.modules.NoFall;
 import com.overkill.client.module.modules.NoHurtCam;
 import com.overkill.client.module.modules.NoMiningPenalty;
+import com.overkill.client.module.modules.NoRender;
 import com.overkill.client.module.modules.NoSlow;
 import com.overkill.client.module.modules.Nuker;
 import com.overkill.client.module.modules.Parkour;
@@ -145,7 +147,9 @@ public final class Modules {
 		new TargetHUD(),
 		new RecordingMode(),
 		new LowHealth(),
-		new DangerAlerts()
+		new DangerAlerts(),
+		new LightOverlay(),
+		new NoRender()
 	);
 
 	private Modules() {

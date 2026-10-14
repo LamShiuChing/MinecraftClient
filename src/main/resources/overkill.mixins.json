@@ -45,7 +45,12 @@
 		"LevelExtractorAntiBlindMixin",
 		"HudAntiBlindMixin",
 		"AbstractContainerScreenSortMixin",
-		"LocalPlayerPortalGUIMixin"
+		"LocalPlayerPortalGUIMixin",
+		"ParticleEngineNoRenderMixin",
+		"ClientLevelNoRenderMixin",
+		"WeatherEffectRendererNoRenderMixin",
+		"LocalPlayerNoRenderMixin",
+		"FallingBlockRendererNoRenderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
