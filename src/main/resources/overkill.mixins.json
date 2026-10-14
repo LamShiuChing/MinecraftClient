@@ -37,7 +37,13 @@
 		"AbstractBoatBoatFlyMixin",
 		"MinecraftTimerMixin",
 		"MouseHandlerTurnMixin",
-		"MultiPlayerGameModeBowAimbotMixin"
+		"MultiPlayerGameModeBowAimbotMixin",
+		"GameRendererNoHurtCamMixin",
+		"CameraAntiBlindMixin",
+		"MobEffectFogEnvironmentAntiBlindMixin",
+		"LightmapRenderStateExtractorAntiBlindMixin",
+		"LevelExtractorAntiBlindMixin",
+		"HudAntiBlindMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

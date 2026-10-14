@@ -80,6 +80,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Combat | AimBot | Smoothly turns your view (the real camera) to the body centre of the nearest mob in sight within Range (3-30): eases in and out, never overshoots. Speed: degrees per tick, max = instant. Hostiles / Passives; the Ender Dragon by its head |
 | Combat | TriggerBot | Attacks the mob under your crosshair as soon as your attack is fully charged, like a left click (Criticals and AutoTool apply); also the Ender Dragon's parts |
 | Combat | BowAimbot | While you draw a bow (or hold a loaded crossbow) aims at the nearest mob, End Crystal (Crystals) or Ender Dragon (its body) in sight within Range: arrow drop and drag, draw power, your own movement and the target's (lead). Right before the shot it looks exactly there |
+| Render | StorageESP | Boxes chests (orange), trapped chests (red), barrels (brown), shulker boxes (pink) and ender chests (cyan) through walls within Range blocks; Hoppers toggle. The HUD shows how many it found |
+| Render | NoHurtCam | No camera shake when you take damage (the damage itself is unchanged) |
+| Render | AntiBlind | Hides what blocks your view, only on screen (the effects stay): Blindness (blindness and darkness fog, darkness flicker), Nausea (nausea and portal wobble), Overlays (pumpkin, fire, powder snow), Liquids (water and lava fog) |
 
 ## Build
 
