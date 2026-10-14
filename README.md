@@ -115,6 +115,8 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Render | ArmorHUD | Your armor and main/offhand items with vanilla durability bars and the uses left; an item under Warn % (default 10) turns red and blinks |
 | Combat | TargetHUD | Panel with the name, an animated health bar, HP and armor of the mob you fight: the last one you (or KillAura, TriggerBot, TPAura) hit, else the one you look at within 6 blocks. Works on the Ender Dragon; fades out 3 s after combat |
 | Client | RecordingMode | F6: a clean frame for recording. Hides InfoHUD, ArmorHUD, TargetHUD, Tracers, Nametags and toasts; Hide vanilla also hides the vanilla HUD (hotbar, hearts, crosshair, chat, boss bar...). Keeps the watermark, module list and Stopwatch (rules 6 and 7) |
+| Player | LowHealth | Health below Hearts (default 4): a warning bell (Sound) and a red glow pulsing at the screen edges until you heal. Only warns |
+| Player | DangerAlerts | Big warning above the crosshair and a ping (once per danger, at most every 3 s) for: Lava up to 2 blocks ahead or below you while falling; a Fall that would kill you or deal Fall warn HP (not with NoFall, or AutoMLG with a water bucket; armor and potions are not counted, so it warns early); a Creeper within 5 blocks (7 while hissing); the Void below you (not with AntiVoid). Only warns |
 
 ## Build
 

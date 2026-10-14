@@ -22,6 +22,7 @@ import com.overkill.client.module.modules.ChestStealer;
 import com.overkill.client.module.modules.ClickGuiModule;
 import com.overkill.client.module.modules.ClickTP;
 import com.overkill.client.module.modules.Criticals;
+import com.overkill.client.module.modules.DangerAlerts;
 import com.overkill.client.module.modules.ESP;
 import com.overkill.client.module.modules.ElytraFly;
 import com.overkill.client.module.modules.FastBreak;
@@ -37,6 +38,7 @@ import com.overkill.client.module.modules.InventorySort;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.LongJump;
+import com.overkill.client.module.modules.LowHealth;
 import com.overkill.client.module.modules.Nametags;
 import com.overkill.client.module.modules.NoFall;
 import com.overkill.client.module.modules.NoHurtCam;
@@ -141,7 +143,9 @@ public final class Modules {
 		new HudEditorModule(),
 		new ArmorHUD(),
 		new TargetHUD(),
-		new RecordingMode()
+		new RecordingMode(),
+		new LowHealth(),
+		new DangerAlerts()
 	);
 
 	private Modules() {
