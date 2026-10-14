@@ -32,8 +32,16 @@ public class Batch1GameTest implements FabricClientGameTest {
 			check(Math.abs(pos(ctx).y - top) < 0.1, "Fly hovers, drifted " + (pos(ctx).y - top));
 			ctx.takeScreenshot("batch1-fly");
 
-			// NoFall: a 15+ block drop leaves health untouched
+			// NoFall while flying: sneaking down to the ground does no damage. The server doesn't know we fly,
+			// so it counts the descent as a fall even though the client's fall distance stays 0
 			set(ctx, "NoFall", true);
+			ctx.getInput().holdKey(o -> o.keyShift);
+			land(ctx, ground);
+			ctx.getInput().releaseKey(o -> o.keyShift);
+			check(health(world) == 20, "sneaking down with Fly + NoFall does no damage, health " + health(world));
+			climb(ctx, ground + 15);
+
+			// NoFall: a 15+ block drop leaves health untouched
 			set(ctx, "Fly", false);
 			check(ctx.computeOnClient(mc -> !mc.player.getAbilities().flying && !mc.player.getAbilities().mayfly), "Fly off restores no-flight");
 			land(ctx, ground);
