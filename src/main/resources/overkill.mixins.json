@@ -50,7 +50,12 @@
 		"ClientLevelNoRenderMixin",
 		"WeatherEffectRendererNoRenderMixin",
 		"LocalPlayerNoRenderMixin",
-		"FallingBlockRendererNoRenderMixin"
+		"FallingBlockRendererNoRenderMixin",
+		"EntityFreeLookMixin",
+		"CameraFreeLookMixin",
+		"CameraClipMixin",
+		"AttributeTrackSamplerAmbienceMixin",
+		"LevelAmbienceMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -4,6 +4,7 @@ import com.overkill.client.gui.Toasts;
 import com.overkill.client.module.modules.AimBot;
 import com.overkill.client.module.modules.AirJump;
 import com.overkill.client.module.modules.AirPlace;
+import com.overkill.client.module.modules.Ambience;
 import com.overkill.client.module.modules.AntiBlind;
 import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
@@ -20,6 +21,7 @@ import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.AutoWalk;
 import com.overkill.client.module.modules.BoatFly;
 import com.overkill.client.module.modules.BowAimbot;
+import com.overkill.client.module.modules.CameraClip;
 import com.overkill.client.module.modules.ChestStealer;
 import com.overkill.client.module.modules.ClickGuiModule;
 import com.overkill.client.module.modules.ClickTP;
@@ -30,6 +32,7 @@ import com.overkill.client.module.modules.ElytraFly;
 import com.overkill.client.module.modules.FastBreak;
 import com.overkill.client.module.modules.FastPlace;
 import com.overkill.client.module.modules.Fly;
+import com.overkill.client.module.modules.FreeLook;
 import com.overkill.client.module.modules.Freecam;
 import com.overkill.client.module.modules.Fullbright;
 import com.overkill.client.module.modules.Hammer;
@@ -155,7 +158,10 @@ public final class Modules {
 		new AirPlace(),
 		new LavaFiller(),
 		new LightOverlay(),
-		new NoRender()
+		new NoRender(),
+		new FreeLook(),
+		new CameraClip(),
+		new Ambience()
 	);
 
 	private Modules() {

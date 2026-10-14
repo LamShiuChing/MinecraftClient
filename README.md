@@ -122,6 +122,9 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | World | LavaFiller | Fills lava source blocks within Range (Flowing: also flowing lava) with cobblestone, netherrack, dirt or cobbled deepslate from your inventory (each a toggle; never any other block), nearest first, 4 per tick |
 | Render | LightOverlay | A cross on every block within Range (8-32) where hostile mobs can spawn, by vanilla's own spawn check (glass, bottom slabs and the like never): red = no light at all, they spawn now; yellow = no block light but daylight, they spawn at night. A torch clears its area within a second. Hidden in RecordingMode |
 | Render | NoRender | Hides, only on screen: Particles (all), Explosions (the cloud and debris smoke; the blocks still break), Weather (rain, snow and splashes; it still rains), Totem (the pop-up animation; the totem still saves you), Boss bar, Falling blocks (the entity is still there). The vignette has its own vanilla option (Video Settings) |
+| Render | FreeLook | Toggle: third person camera that orbits you with the mouse while your body keeps facing (and walking) where it was, also for the server. Off: the old perspective and view are back. Turns Freecam off |
+| Render | CameraClip | The third person camera passes through blocks instead of being pushed in by walls; Distance (1-20, vanilla 4) sets how far back it sits |
+| Render | Ambience | Pick the time of day (Time 0-24000: 6000 noon, 12500 sunset, 18000 midnight) and the Weather (0 clear, 1 rain, 2 thunder) you see. Only on your screen: the world's real time and weather (and InfoHUD's time) don't change. Not in the End, which has no day or weather sky |
 
 ## Build
 
