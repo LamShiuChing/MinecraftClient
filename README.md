@@ -63,6 +63,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | Freecam | Fly the camera away from your body (WASD, jump/sneak for up/down, mouse to look, scroll for speed); the body stays where it is and doesn't click. Interact: aim and click from the camera (mine, open chests and doors, press buttons, hit mobs); for each click your body teleports next to the target and back, and waits there while a chest is open |
 | Movement | ClickTP | Right click with an empty hand on a block out of reach (up to Range blocks) to teleport on top of it. No fall damage |
 | Combat | TPAura | KillAura up to Range (5-60) blocks away: teleports next to each mob, hits it at full cooldown (Criticals and AutoTool apply) and teleports back in the same tick. Only mobs it can reach through open space (also the Ender Dragon's parts) |
+| Render | Tracers | Lines from the crosshair to every mob within Range blocks, through walls: hostiles red, passives green, dropped items yellow (Items toggle). Mobs behind you get a line off the screen edge their way |
+| Render | Nametags | Name and health over every mob and player, e.g. `Zombie 18/20 ❤`, through walls at any distance (Scale slider). Also the Ender Dragon |
+| Render | TrueSight | Invisible mobs show up see-through (potion of invisibility, witches), and barrier blocks show their marker like in creative |
 
 ## Build
 
