@@ -23,6 +23,8 @@ public class Scaffold extends Module {
 
 	public Scaffold() {
 		super("Scaffold", "Places blocks from your inventory under your feet, so walking off an edge builds a bridge. Tower: hold jump standing still to pillar up.", Category.WORLD);
+		// Flying straight up counts as towering: it builds a pillar under you, which you then can't fly back down through
+		conflicts("Fly");
 	}
 
 	@Override

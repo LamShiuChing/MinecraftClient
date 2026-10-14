@@ -1,5 +1,6 @@
 package com.overkill.client.module;
 
+import com.overkill.client.gui.Toasts;
 import com.overkill.client.setting.Setting;
 import net.minecraft.client.Minecraft;
 
@@ -16,6 +17,7 @@ public abstract class Module {
 	public final List<Setting<?>> settings = new ArrayList<>();
 	public int key;
 	private boolean enabled;
+	private List<String> conflicts = List.of();
 
 	protected Module(String name, String description, Category category, int key) {
 		this.name = name;
@@ -32,8 +34,20 @@ public abstract class Module {
 		return enabled;
 	}
 
+	/** Modules that break this one (or it them): turning either on turns the other off. Call in the constructor, one side is enough. */
+	protected void conflicts(String... names) {
+		conflicts = List.of(names);
+	}
+
 	public void setEnabled(boolean enabled) {
 		if (this.enabled == enabled) return;
+		if (enabled) {
+			for (Module m : Modules.ALL) {
+				if (!m.enabled || !conflicts.contains(m.name) && !m.conflicts.contains(name)) continue;
+				m.setEnabled(false);
+				Toasts.show(m.name + " §c✗ disabled §7(conflicts with " + name + ")", false);
+			}
+		}
 		this.enabled = enabled;
 		if (enabled) onEnable();
 		else onDisable();

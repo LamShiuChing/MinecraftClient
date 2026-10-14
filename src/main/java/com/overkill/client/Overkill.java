@@ -1,7 +1,9 @@
 package com.overkill.client;
 
 import com.overkill.client.gui.Hud;
+import com.overkill.client.gui.Toasts;
 import com.overkill.client.module.Modules;
+import com.overkill.client.module.modules.Profiles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -15,5 +17,7 @@ public class Overkill implements ClientModInitializer {
 		ClientTickEvents.END_CLIENT_TICK.register(Modules::tick);
 		ClientLifecycleEvents.CLIENT_STOPPING.register(mc -> Config.save());
 		HudElementRegistry.addLast(Identifier.fromNamespaceAndPath("overkill", "hud"), Hud::render);
+		HudElementRegistry.addLast(Identifier.fromNamespaceAndPath("overkill", "toasts"), Toasts::render);
+		Profiles.registerKeys();
 	}
 }

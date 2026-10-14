@@ -22,6 +22,12 @@ An open-source, **singleplayer-only** Fabric client for vanilla survival, built 
 
 Settings and keybinds save to `config/overkill.json`.
 
+### Toasts, profiles and conflicts
+
+- **Toasts:** toggling a module with its key pops up a toast bottom right ("Fly ✓ enabled" in green, "Fly ✗ disabled" in red) for 1.5 s. Clicks in the menu don't, the menu already shows it. Turn them off with ClickGUI > Toasts.
+- **Profiles:** in Client > Profiles pick a Slot (1-5) and click Save or Load. A profile is every module's on/off, settings and key, saved to `config/overkill-profiles/<slot>.json`. To load a slot with one key, bind "Load profile 1-5" in Options > Controls > Overkill Profiles (unbound by default).
+- **Conflicts:** turning on a module turns off the ones that break it, with a toast ("Scaffold ✗ disabled (conflicts with Fly)"). Right now: Fly and Scaffold, since flying straight up with Scaffold's Tower builds a pillar under you. A module declares them with `conflicts("Other")` in its constructor; one side is enough.
+
 ## Modules
 
 | Category | Module | What it does |
@@ -63,6 +69,7 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | Freecam | Fly the camera away from your body (WASD, jump/sneak for up/down, mouse to look, scroll for speed); the body stays where it is and doesn't click. Interact: aim and click from the camera (mine, open chests and doors, press buttons, hit mobs); for each click your body teleports next to the target and back, and waits there while a chest is open |
 | Movement | ClickTP | Right click with an empty hand on a block out of reach (up to Range blocks) to teleport on top of it. No fall damage |
 | Combat | TPAura | KillAura up to Range (5-60) blocks away: teleports next to each mob, hits it at full cooldown (Criticals and AutoTool apply) and teleports back in the same tick. Only mobs it can reach through open space (also the Ender Dragon's parts) |
+| Client | Profiles | Save every module's state to a slot (1-5) and load it back, also with a key per slot |
 
 ## Build
 
