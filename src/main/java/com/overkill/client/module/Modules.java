@@ -1,6 +1,10 @@
 package com.overkill.client.module;
 
+import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.ClickGuiModule;
+import com.overkill.client.module.modules.FastBreak;
+import com.overkill.client.module.modules.KillAura;
+import com.overkill.client.module.modules.Nuker;
 import com.overkill.client.module.modules.Sprint;
 import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
@@ -14,7 +18,11 @@ public final class Modules {
 		new ClickGuiModule(),
 		new Sprint(),
 		new Step(),
-		new Stopwatch()
+		new Stopwatch(),
+		new KillAura(),
+		new Nuker(),
+		new FastBreak(),
+		new AutoTotem()
 	);
 
 	private Modules() {

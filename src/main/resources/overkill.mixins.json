@@ -2,7 +2,7 @@
 	"required": true,
 	"package": "com.overkill.client.mixin",
 	"compatibilityLevel": "JAVA_25",
-	"client": ["KeyboardHandlerMixin"],
+	"client": ["KeyboardHandlerMixin", "MultiPlayerGameModeAccessor"],
 	"injectors": {
 		"defaultRequire": 1
 	}
