@@ -1,5 +1,6 @@
 package com.overkill.client.module;
 
+import com.overkill.client.module.modules.AntiVoid;
 import com.overkill.client.module.modules.AutoArmor;
 import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoTool;
@@ -13,6 +14,7 @@ import com.overkill.client.module.modules.FastPlace;
 import com.overkill.client.module.modules.Fly;
 import com.overkill.client.module.modules.Fullbright;
 import com.overkill.client.module.modules.Hammer;
+import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.NoFall;
@@ -26,6 +28,7 @@ import com.overkill.client.module.modules.StrongholdFinder;
 import com.overkill.client.module.modules.VeinMiner;
 import com.overkill.client.module.modules.Velocity;
 import com.overkill.client.module.modules.XRay;
+import com.overkill.client.module.modules.Zoom;
 import net.minecraft.client.Minecraft;
 
 import java.util.List;
@@ -58,7 +61,10 @@ public final class Modules {
 		new VeinMiner(),
 		new AutoTool(),
 		new AutoArmor(),
-		new ChestStealer()
+		new ChestStealer(),
+		new Zoom(),
+		new InfoHUD(),
+		new AntiVoid()
 	);
 
 	private Modules() {

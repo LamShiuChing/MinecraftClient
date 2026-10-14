@@ -52,6 +52,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Player | AutoTool | Switches to the best tool for the block you mine (one that gets drops first) and the strongest weapon for what you hit, also for Nuker, Hammer, VeinMiner and KillAura. Pulls tools from the main inventory, skips nearly broken ones (Save tools), switches back after manual use |
 | Combat | AutoArmor | Wears the best armor from your inventory (armor, then toughness, then Protection), one piece every 5 ticks; the old piece goes where the new one was, so a full inventory is fine. Never Curse of Binding, never takes off an elytra (Keep elytra) |
 | Player | ChestStealer | Shift-clicks everything out of an open chest, double chest, barrel, ender chest, shulker box, hopper or dispenser (Delay: ticks between moves, 0 = all at once); Auto close when it's empty or your inventory is full; Skip junk leaves rotten flesh, poisonous potatoes, spider eyes and string |
+| Render | Zoom | Smooth binocular zoom for cinematic shots, toggled with its key: the view eases to 2x-50x (Zoom slider), the mouse wheel zooms in and out, the mouse slows down to match |
+| Client | InfoHUD | Info panel under the watermark: XYZ, the same spot in the Nether/Overworld, facing, biome, FPS, in-game day and time (each line can be turned off) |
+| Movement | AntiVoid | Falling with nothing below you down to the bottom of the world catches you (Height: blocks you fall first) and you fly until you land; sneak to go down, no fall damage |
 
 ## Build
 

@@ -16,7 +16,9 @@
 		"MinecraftFastPlaceAccessor",
 		"MultiPlayerGameModeMiningMixin",
 		"ClientLevelAccessor",
-		"BlockStatePredictionHandlerAccessor"
+		"BlockStatePredictionHandlerAccessor",
+		"CameraZoomMixin",
+		"MouseHandlerZoomMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
