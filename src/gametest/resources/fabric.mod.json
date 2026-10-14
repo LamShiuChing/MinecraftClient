@@ -29,7 +29,8 @@
 			"com.overkill.test.Batch21GameTest",
 			"com.overkill.test.Batch22GameTest",
 			"com.overkill.test.Batch23GameTest",
-			"com.overkill.test.Batch24GameTest"
+			"com.overkill.test.Batch24GameTest",
+			"com.overkill.test.Batch31GameTest"
 		]
 	}
 }

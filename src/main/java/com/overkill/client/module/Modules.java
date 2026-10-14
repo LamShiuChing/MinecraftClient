@@ -8,6 +8,7 @@ import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
 import com.overkill.client.module.modules.ArmorHUD;
 import com.overkill.client.module.modules.AutoArmor;
+import com.overkill.client.module.modules.AutoBreed;
 import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoFarm;
 import com.overkill.client.module.modules.AutoFish;
@@ -16,6 +17,7 @@ import com.overkill.client.module.modules.AutoSwap;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.AutoWalk;
+import com.overkill.client.module.modules.BetterTooltips;
 import com.overkill.client.module.modules.BoatFly;
 import com.overkill.client.module.modules.BowAimbot;
 import com.overkill.client.module.modules.ChestStealer;
@@ -51,6 +53,7 @@ import com.overkill.client.module.modules.Profiles;
 import com.overkill.client.module.modules.RecordingMode;
 import com.overkill.client.module.modules.SafeWalk;
 import com.overkill.client.module.modules.Scaffold;
+import com.overkill.client.module.modules.ShulkerPeek;
 import com.overkill.client.module.modules.Speed;
 import com.overkill.client.module.modules.Spider;
 import com.overkill.client.module.modules.Sprint;
@@ -145,7 +148,10 @@ public final class Modules {
 		new TargetHUD(),
 		new RecordingMode(),
 		new LowHealth(),
-		new DangerAlerts()
+		new DangerAlerts(),
+		new ShulkerPeek(),
+		new BetterTooltips(),
+		new AutoBreed()
 	);
 
 	private Modules() {

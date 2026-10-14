@@ -117,6 +117,9 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Client | RecordingMode | F6: a clean frame for recording. Hides InfoHUD, ArmorHUD, TargetHUD, Tracers, Nametags and toasts; Hide vanilla also hides the vanilla HUD (hotbar, hearts, crosshair, chat, boss bar...). Keeps the watermark, module list and Stopwatch (rules 6 and 7) |
 | Player | LowHealth | Health below Hearts (default 4): a warning bell (Sound) and a red glow pulsing at the screen edges until you heal. Only warns |
 | Player | DangerAlerts | Big warning above the crosshair and a ping (once per danger, at most every 3 s) for: Lava up to 2 blocks ahead or below you while falling; a Fall that would kill you or deal Fall warn HP (not with NoFall, or AutoMLG with a water bucket; armor and potions are not counted, so it warns early); a Creeper within 5 blocks (7 while hissing); the Void below you (not with AntiVoid). Only warns |
+| Render | ShulkerPeek | Hover a shulker box in any inventory: its contents show as a 9x3 grid of items with counts, in the box's colour (purple when undyed), instead of vanilla's five-line list. Bundles already have a grid in vanilla |
+| Render | BetterTooltips | Extra tooltip lines, each with a toggle: Durability (`Durability: 200/250`, coloured like the durability bar), Food (`Food: +5 (sat 6.0)`), Repair cost (the anvil work penalty of anvil-worked items) |
+| Player | AutoBreed | Feeds adult animals within Range (2-6) their breeding food from your inventory (wheat for cows, sheep, goats, seeds for chickens, carrots for pigs...), always in pairs of the same kind, up to 4 per tick, with normal right clicks; the server breeds them as usual. Never calves; not horses, llamas, camels, wolves, cats, parrots or ocelots. A fed animal is left alone for 5 minutes (the breeding cooldown, which the client can't see) |
 
 ## Build
 

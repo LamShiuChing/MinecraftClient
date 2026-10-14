@@ -45,7 +45,8 @@
 		"LevelExtractorAntiBlindMixin",
 		"HudAntiBlindMixin",
 		"AbstractContainerScreenSortMixin",
-		"LocalPlayerPortalGUIMixin"
+		"LocalPlayerPortalGUIMixin",
+		"ItemStackShulkerPeekMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
