@@ -1,8 +1,10 @@
 package com.overkill.client.module;
 
+import com.overkill.client.module.modules.AutoArmor;
 import com.overkill.client.module.modules.AutoEat;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
+import com.overkill.client.module.modules.ChestStealer;
 import com.overkill.client.module.modules.ClickGuiModule;
 import com.overkill.client.module.modules.Criticals;
 import com.overkill.client.module.modules.ESP;
@@ -54,7 +56,9 @@ public final class Modules {
 		new FastPlace(),
 		new Hammer(),
 		new VeinMiner(),
-		new AutoTool()
+		new AutoTool(),
+		new AutoArmor(),
+		new ChestStealer()
 	);
 
 	private Modules() {

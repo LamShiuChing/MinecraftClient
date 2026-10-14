@@ -50,6 +50,8 @@ Settings and keybinds save to `config/overkill.json`.
 | World | Hammer | Mining a block also breaks a flat 3x3 or 5x5 around it in the mined face's plane: blocks your tool is right for, or instant ones. Drops fall normally |
 | World | VeinMiner | Mining an ore or a log also breaks every connected block of the same kind, up to Max (ores, logs = tree feller). Drops fall normally |
 | Player | AutoTool | Switches to the best tool for the block you mine (one that gets drops first) and the strongest weapon for what you hit, also for Nuker, Hammer, VeinMiner and KillAura. Pulls tools from the main inventory, skips nearly broken ones (Save tools), switches back after manual use |
+| Combat | AutoArmor | Wears the best armor from your inventory (armor, then toughness, then Protection), one piece every 5 ticks; the old piece goes where the new one was, so a full inventory is fine. Never Curse of Binding, never takes off an elytra (Keep elytra) |
+| Player | ChestStealer | Shift-clicks everything out of an open chest, double chest, barrel, ender chest, shulker box, hopper or dispenser (Delay: ticks between moves, 0 = all at once); Auto close when it's empty or your inventory is full; Skip junk leaves rotten flesh, poisonous potatoes, spider eyes and string |
 
 ## Build
 
