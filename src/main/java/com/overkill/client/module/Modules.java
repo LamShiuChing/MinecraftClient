@@ -1,5 +1,6 @@
 package com.overkill.client.module;
 
+import com.overkill.client.gui.Toasts;
 import com.overkill.client.module.modules.AimBot;
 import com.overkill.client.module.modules.AirJump;
 import com.overkill.client.module.modules.AntiBlind;
@@ -42,6 +43,7 @@ import com.overkill.client.module.modules.NoSlow;
 import com.overkill.client.module.modules.Nuker;
 import com.overkill.client.module.modules.Parkour;
 import com.overkill.client.module.modules.PortalGUI;
+import com.overkill.client.module.modules.Profiles;
 import com.overkill.client.module.modules.SafeWalk;
 import com.overkill.client.module.modules.Scaffold;
 import com.overkill.client.module.modules.Speed;
@@ -130,7 +132,8 @@ public final class Modules {
 		new InventorySort(),
 		new Waypoints(),
 		new AutoWalk(),
-		new PortalGUI()
+		new PortalGUI(),
+		new Profiles()
 	);
 
 	private Modules() {
@@ -139,7 +142,11 @@ public final class Modules {
 	/** Called by KeyboardHandlerMixin for key presses made in game (no screen open). */
 	public static void onKeyPressed(int key) {
 		for (Module m : ALL) {
-			if (m.key == key) m.toggle();
+			if (m.key != key) continue;
+			boolean was = m.isEnabled();
+			m.toggle();
+			// Toasts for keys only: in the ClickGUI the row shows it. Skips ClickGUI and Profiles, which never turn on
+			if (m.isEnabled() != was) Toasts.show(m.name + (was ? " §c✗ disabled" : " §a✓ enabled"), !was);
 		}
 	}
 

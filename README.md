@@ -35,6 +35,11 @@ Settings and keybinds save to `config/overkill.json`.
 | Middle click a module | Reset all its settings to default (it stays on or off, the keybind stays) |
 
 Panel positions and collapsed panels save to `config/overkill-gui.json`.
+### Toasts, profiles and conflicts
+
+- **Toasts:** toggling a module with its key pops up a toast bottom right ("Fly ✓ enabled" in green, "Fly ✗ disabled" in red) for 1.5 s. Clicks in the menu don't, the menu already shows it. Turn them off with ClickGUI > Toasts.
+- **Profiles:** in Client > Profiles pick a Slot (1-5) and click Save or Load. A profile is every module's on/off, settings and key, saved to `config/overkill-profiles/<slot>.json`. To load a slot with one key, bind "Load profile 1-5" in Options > Controls > Overkill Profiles (unbound by default).
+- **Conflicts:** turning on a module turns off the ones that break it, with a toast ("Scaffold ✗ disabled (conflicts with Fly)"). Right now: Fly and Scaffold, since flying straight up with Scaffold's Tower builds a pillar under you. A module declares them with `conflicts("Other")` in its constructor; one side is enough.
 
 ## Modules
 
@@ -102,6 +107,7 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Render | Waypoints | Mark places (base, portals, stronghold, the dragon fight): **B** (Add waypoint in Controls) adds one where you stand, **N** removes the nearest within 5 blocks. Name and distance show through walls; Overworld ones show in the Nether at x/8 z/8 and the other way round at x*8 z*8, marked [Overworld] / [Nether]. Auto portals marks both ends of every nether portal you take. Saved per world in `config/overkill-waypoints.json` |
 | Movement | AutoWalk | Keeps walking forward (sprints with Sprint) until you press forward or back; pauses while a menu is open |
 | Player | PortalGUI | Use your inventory, chat and other menus while standing in a nether portal; the portal works and takes as long as normal |
+| Client | Profiles | Save every module's state to a slot (1-5) and load it back, also with a key per slot |
 
 ## Build
 
