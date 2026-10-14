@@ -1,5 +1,6 @@
 package com.overkill.client.module;
 
+import com.overkill.client.module.modules.AirJump;
 import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
 import com.overkill.client.module.modules.AutoArmor;
@@ -17,9 +18,11 @@ import com.overkill.client.module.modules.Fly;
 import com.overkill.client.module.modules.Freecam;
 import com.overkill.client.module.modules.Fullbright;
 import com.overkill.client.module.modules.Hammer;
+import com.overkill.client.module.modules.HighJump;
 import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
+import com.overkill.client.module.modules.LongJump;
 import com.overkill.client.module.modules.NoFall;
 import com.overkill.client.module.modules.NoMiningPenalty;
 import com.overkill.client.module.modules.NoSlow;
@@ -80,7 +83,10 @@ public final class Modules {
 		new AntiSuffocate(),
 		new Freecam(),
 		new ClickTP(),
-		new TPAura()
+		new TPAura(),
+		new HighJump(),
+		new AirJump(),
+		new LongJump()
 	);
 
 	private Modules() {

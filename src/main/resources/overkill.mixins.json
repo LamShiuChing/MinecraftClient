@@ -27,7 +27,8 @@
 		"MouseHandlerFreecamMixin",
 		"GameRendererFreecamMixin",
 		"MinecraftFreecamMixin",
-		"MinecraftClickTPMixin"
+		"MinecraftClickTPMixin",
+		"LivingEntityTakeOffMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

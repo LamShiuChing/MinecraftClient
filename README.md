@@ -63,6 +63,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | Freecam | Fly the camera away from your body (WASD, jump/sneak for up/down, mouse to look, scroll for speed); the body stays where it is and doesn't click. Interact: aim and click from the camera (mine, open chests and doors, press buttons, hit mobs); for each click your body teleports next to the target and back, and waits there while a chest is open |
 | Movement | ClickTP | Right click with an empty hand on a block out of reach (up to Range blocks) to teleport on top of it. No fall damage |
 | Combat | TPAura | KillAura up to Range (5-60) blocks away: teleports next to each mob, hits it at full cooldown (Criticals and AutoTool apply) and teleports back in the same tick. Only mobs it can reach through open space (also the Ender Dragon's parts) |
+| Movement | HighJump | Every jump tops out Height (1-30) blocks up. No fall damage from its jumps, even without NoFall |
+| Movement | AirJump | Press jump in mid-air to jump again, as often as you like; Hold: keep jump held to climb a staircase of jumps. No fall damage from its jumps |
+| Movement | LongJump | Sprint-jumps take off Boost (1-10) times as fast, once per jump (Boost 5: about 3x as far). Not while you can fly or in water |
 
 ## Build
 
