@@ -177,7 +177,8 @@ public class Batch5GameTest implements FabricClientGameTest {
 		// Hungry, full health: the most saturating food (steak, from the main inventory), no gapple, no rotten flesh
 		set(ctx, "AutoEat", true);
 		server.waitFor(s -> count(player(s), Items.COOKED_BEEF) == 2, 100);
-		ctx.waitTicks(10);
+		// Client and server count ticks separately: under load the client finishes eating (and swaps back) a few ticks later
+		ctx.waitFor(mc -> !mc.player.isUsingItem() && mc.player.getMainHandItem().getItem() == Items.DIAMOND_SWORD, 100);
 		int food = server.computeOnServer(s -> player(s).getFoodData().getFoodLevel());
 		log("AutoEat: hunger 10 -> " + food + ", beef 3 -> " + count(server, Items.COOKED_BEEF));
 		ctx.takeScreenshot("batch5-autoeat");
