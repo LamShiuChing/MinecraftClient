@@ -27,7 +27,9 @@
 		"MouseHandlerFreecamMixin",
 		"GameRendererFreecamMixin",
 		"MinecraftFreecamMixin",
-		"MinecraftClickTPMixin"
+		"MinecraftClickTPMixin",
+		"MouseHandlerTurnMixin",
+		"MultiPlayerGameModeBowAimbotMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

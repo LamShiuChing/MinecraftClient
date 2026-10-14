@@ -63,6 +63,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Render | Freecam | Fly the camera away from your body (WASD, jump/sneak for up/down, mouse to look, scroll for speed); the body stays where it is and doesn't click. Interact: aim and click from the camera (mine, open chests and doors, press buttons, hit mobs); for each click your body teleports next to the target and back, and waits there while a chest is open |
 | Movement | ClickTP | Right click with an empty hand on a block out of reach (up to Range blocks) to teleport on top of it. No fall damage |
 | Combat | TPAura | KillAura up to Range (5-60) blocks away: teleports next to each mob, hits it at full cooldown (Criticals and AutoTool apply) and teleports back in the same tick. Only mobs it can reach through open space (also the Ender Dragon's parts) |
+| Combat | AimBot | Smoothly turns your view (the real camera) to the body centre of the nearest mob in sight within Range (3-30): eases in and out, never overshoots. Speed: degrees per tick, max = instant. Hostiles / Passives; the Ender Dragon by its head |
+| Combat | TriggerBot | Attacks the mob under your crosshair as soon as your attack is fully charged, like a left click (Criticals and AutoTool apply); also the Ender Dragon's parts |
+| Combat | BowAimbot | While you draw a bow (or hold a loaded crossbow) aims at the nearest mob, End Crystal (Crystals) or Ender Dragon (its body) in sight within Range: arrow drop and drag, draw power, your own movement and the target's (lead). Right before the shot it looks exactly there |
 
 ## Build
 
