@@ -1,6 +1,7 @@
 package com.overkill.client.module;
 
 import com.overkill.client.module.modules.ClickGuiModule;
+import com.overkill.client.module.modules.ESP;
 import com.overkill.client.module.modules.Fly;
 import com.overkill.client.module.modules.Fullbright;
 import com.overkill.client.module.modules.NoFall;
@@ -8,6 +9,8 @@ import com.overkill.client.module.modules.Speed;
 import com.overkill.client.module.modules.Sprint;
 import com.overkill.client.module.modules.Step;
 import com.overkill.client.module.modules.Stopwatch;
+import com.overkill.client.module.modules.StrongholdFinder;
+import com.overkill.client.module.modules.XRay;
 import net.minecraft.client.Minecraft;
 
 import java.util.List;
@@ -22,7 +25,10 @@ public final class Modules {
 		new Fly(),
 		new Speed(),
 		new NoFall(),
-		new Fullbright()
+		new Fullbright(),
+		new XRay(),
+		new ESP(),
+		new StrongholdFinder()
 	);
 
 	private Modules() {

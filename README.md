@@ -32,6 +32,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Movement | Speed | Faster ground movement (multiplier slider) |
 | Movement | NoFall | No fall damage |
 | Render | Fullbright | Everything fully lit: caves, night, the Nether |
+| Render | XRay | Hide everything except valuable ores (diamond, debris, gold, iron, emerald, redstone, lapis) and obsidian |
+| Render | ESP | Glowing outline through walls on hostiles, passives and/or items |
+| World | StrongholdFinder | Throw two Eyes of Ender 50+ blocks apart, shows the stronghold X/Z and distance |
 | Client | ClickGUI | The menu (Right Shift) |
 | Client | Stopwatch | Real-time timer for speed episodes |
 
