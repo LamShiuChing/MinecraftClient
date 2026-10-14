@@ -4,6 +4,8 @@ import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
 import com.overkill.client.module.modules.AutoArmor;
 import com.overkill.client.module.modules.AutoEat;
+import com.overkill.client.module.modules.AutoFarm;
+import com.overkill.client.module.modules.AutoFish;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.ChestStealer;
@@ -80,7 +82,9 @@ public final class Modules {
 		new AntiSuffocate(),
 		new Freecam(),
 		new ClickTP(),
-		new TPAura()
+		new TPAura(),
+		new AutoFish(),
+		new AutoFarm()
 	);
 
 	private Modules() {
