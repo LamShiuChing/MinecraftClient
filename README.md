@@ -58,6 +58,8 @@ Settings and keybinds save to `config/overkill.json`.
 | Player | WaterBreathing | Never drown: while your air is below full, every other tick the server sees your eyes just above the water surface (air +4 there, -1 below). Needs open water straight above you (no blocks in the way); costs some hunger, more the deeper you are |
 | Movement | NoSlow | No slowdown while eating, drinking, blocking with a shield or drawing a bow (and you keep sprinting); Cobweb, Soul sand, Honey and Berry bush toggles |
 | Movement | Spider | Walk into a wall to climb it like a ladder (speed slider) |
+| World | NoMiningPenalty | Mines at ground speed in the air (Air: flying, jumping, falling) and with your head underwater (Water; works once you've been in the world a little while, longer for very hard blocks) |
+| Player | AntiSuffocate | Breaks blocks that would suffocate you, and the block falling sand or gravel would land on to bury your head (with AutoTool's tool). Drops fall normally. A block that appears in your head at once (piston, teleport) can still hit once |
 
 ## Build
 

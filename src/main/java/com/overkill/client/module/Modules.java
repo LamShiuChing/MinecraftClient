@@ -1,5 +1,6 @@
 package com.overkill.client.module;
 
+import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
 import com.overkill.client.module.modules.AutoArmor;
 import com.overkill.client.module.modules.AutoEat;
@@ -18,6 +19,7 @@ import com.overkill.client.module.modules.InfoHUD;
 import com.overkill.client.module.modules.Jesus;
 import com.overkill.client.module.modules.KillAura;
 import com.overkill.client.module.modules.NoFall;
+import com.overkill.client.module.modules.NoMiningPenalty;
 import com.overkill.client.module.modules.NoSlow;
 import com.overkill.client.module.modules.Nuker;
 import com.overkill.client.module.modules.Scaffold;
@@ -70,7 +72,9 @@ public final class Modules {
 		new AntiVoid(),
 		new WaterBreathing(),
 		new NoSlow(),
-		new Spider()
+		new Spider(),
+		new NoMiningPenalty(),
+		new AntiSuffocate()
 	);
 
 	private Modules() {
