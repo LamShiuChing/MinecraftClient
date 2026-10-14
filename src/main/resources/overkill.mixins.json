@@ -51,7 +51,8 @@
 		"WeatherEffectRendererNoRenderMixin",
 		"LocalPlayerNoRenderMixin",
 		"FallingBlockRendererNoRenderMixin",
-		"ItemStackShulkerPeekMixin"
+		"ItemStackShulkerPeekMixin",
+		"LivingEntityFastSwimMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
