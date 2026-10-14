@@ -40,7 +40,7 @@ public class Tracers extends Module {
 	}
 
 	private void render(GuiGraphicsExtractor g, DeltaTracker delta) {
-		if (!isEnabled() || mc.player == null) return;
+		if (!isEnabled() || mc.player == null || RecordingMode.active()) return;
 		float pt = delta.getGameTimeDeltaPartialTick(true);
 		float cx = g.guiWidth() / 2f, cy = g.guiHeight() / 2f;
 		for (Entity e : mc.level.entitiesForRendering()) {

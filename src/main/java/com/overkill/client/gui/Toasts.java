@@ -1,6 +1,7 @@
 package com.overkill.client.gui;
 
 import com.overkill.client.module.modules.ClickGuiModule;
+import com.overkill.client.module.modules.RecordingMode;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -40,7 +41,7 @@ public final class Toasts {
 
 	public static void render(GuiGraphicsExtractor g, DeltaTracker delta) {
 		active();
-		if (hidden) return;
+		if (hidden || RecordingMode.active()) return;
 		Font font = Minecraft.getInstance().font;
 		long now = System.currentTimeMillis();
 		// Above the hotbar, health, food and air rows, which reach this far right on narrow windows

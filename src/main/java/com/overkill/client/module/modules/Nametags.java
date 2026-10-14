@@ -33,7 +33,7 @@ public class Nametags extends Module {
 	}
 
 	private void render(GuiGraphicsExtractor g, DeltaTracker delta) {
-		if (!isEnabled() || mc.player == null) return;
+		if (!isEnabled() || mc.player == null || RecordingMode.active()) return;
 		float pt = delta.getGameTimeDeltaPartialTick(true);
 		float s = scale.get().floatValue();
 		List<LivingEntity> mobs = new ArrayList<>();

@@ -40,6 +40,9 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 - **Toasts:** toggling a module with its key pops up a toast bottom right ("Fly ✓ enabled" in green, "Fly ✗ disabled" in red) for 1.5 s. Clicks in the menu don't, the menu already shows it. Turn them off with ClickGUI > Toasts.
 - **Profiles:** in Client > Profiles pick a Slot (1-5) and click Save or Load. A profile is every module's on/off, settings and key, saved to `config/overkill-profiles/<slot>.json`. To load a slot with one key, bind "Load profile 1-5" in Options > Controls > Overkill Profiles (unbound by default).
 - **Conflicts:** turning on a module turns off the ones that break it, with a toast ("Scaffold ✗ disabled (conflicts with Fly)"). Right now: Fly and Scaffold, since flying straight up with Scaffold's Tower builds a pillar under you. A module declares them with `conflicts("Other")` in its constructor; one side is enough.
+**HUD editor:** click HudEditor (Client) in the menu, then drag the watermark, module list, InfoHUD, Stopwatch, ArmorHUD and TargetHUD anywhere. They snap to the screen edges and centre and stick to the nearest corner (or the centre), so the layout survives a window resize. Right click one to reset it, Esc when done. Positions save to `config/overkill-hud.json`.
+
+**RecordingMode (F6)** hides the optional HUD for a clean frame, but never the watermark and module list (rule 6) or the Stopwatch (rule 7).
 
 ## Modules
 
@@ -108,6 +111,10 @@ Panel positions and collapsed panels save to `config/overkill-gui.json`.
 | Movement | AutoWalk | Keeps walking forward (sprints with Sprint) until you press forward or back; pauses while a menu is open |
 | Player | PortalGUI | Use your inventory, chat and other menus while standing in a nether portal; the portal works and takes as long as normal |
 | Client | Profiles | Save every module's state to a slot (1-5) and load it back, also with a key per slot |
+| Client | HudEditor | Opens the HUD editor (see above): drag the HUD elements anywhere, right click resets one |
+| Render | ArmorHUD | Your armor and main/offhand items with vanilla durability bars and the uses left; an item under Warn % (default 10) turns red and blinks |
+| Combat | TargetHUD | Panel with the name, an animated health bar, HP and armor of the mob you fight: the last one you (or KillAura, TriggerBot, TPAura) hit, else the one you look at within 6 blocks. Works on the Ender Dragon; fades out 3 s after combat |
+| Client | RecordingMode | F6: a clean frame for recording. Hides InfoHUD, ArmorHUD, TargetHUD, Tracers, Nametags and toasts; Hide vanilla also hides the vanilla HUD (hotbar, hearts, crosshair, chat, boss bar...). Keeps the watermark, module list and Stopwatch (rules 6 and 7) |
 
 ## Build
 
