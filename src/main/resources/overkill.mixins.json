@@ -35,7 +35,9 @@
 		"ClientLevelTrueSightMixin",
 		"LivingEntityElytraFlyMixin",
 		"AbstractBoatBoatFlyMixin",
-		"MinecraftTimerMixin"
+		"MinecraftTimerMixin",
+		"MouseHandlerTurnMixin",
+		"MultiPlayerGameModeBowAimbotMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

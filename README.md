@@ -77,6 +77,9 @@ Settings and keybinds save to `config/overkill.json`.
 | Movement | ElytraFly | While gliding with an elytra (normal glide start), fly without rockets: look + WASD move at Speed (0.5-10 blocks/tick), jump/sneak go up/down, no keys hovers. The elytra wears out as in a normal glide |
 | Movement | BoatFly | The boat you ride flies: jump goes up, the sprint key down (sneak still gets out), W flies forward at Speed (A/D turn), no keys hovers. Getting out in the air is a fall without damage |
 | World | Timer | Your game ticks run Speed (0.1-5) times as fast: walking, jumping, flying. Server-side things stay normal (mobs, day time, eating, attack damage; mining past ~1.4x gets undone) |
+| Combat | AimBot | Smoothly turns your view (the real camera) to the body centre of the nearest mob in sight within Range (3-30): eases in and out, never overshoots. Speed: degrees per tick, max = instant. Hostiles / Passives; the Ender Dragon by its head |
+| Combat | TriggerBot | Attacks the mob under your crosshair as soon as your attack is fully charged, like a left click (Criticals and AutoTool apply); also the Ender Dragon's parts |
+| Combat | BowAimbot | While you draw a bow (or hold a loaded crossbow) aims at the nearest mob, End Crystal (Crystals) or Ender Dragon (its body) in sight within Range: arrow drop and drag, draw power, your own movement and the target's (lead). Right before the shot it looks exactly there |
 
 ## Build
 

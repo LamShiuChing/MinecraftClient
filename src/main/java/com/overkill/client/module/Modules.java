@@ -1,5 +1,6 @@
 package com.overkill.client.module;
 
+import com.overkill.client.module.modules.AimBot;
 import com.overkill.client.module.modules.AirJump;
 import com.overkill.client.module.modules.AntiSuffocate;
 import com.overkill.client.module.modules.AntiVoid;
@@ -11,6 +12,7 @@ import com.overkill.client.module.modules.AutoMLG;
 import com.overkill.client.module.modules.AutoTool;
 import com.overkill.client.module.modules.AutoTotem;
 import com.overkill.client.module.modules.BoatFly;
+import com.overkill.client.module.modules.BowAimbot;
 import com.overkill.client.module.modules.ChestStealer;
 import com.overkill.client.module.modules.ClickGuiModule;
 import com.overkill.client.module.modules.ClickTP;
@@ -45,6 +47,7 @@ import com.overkill.client.module.modules.StrongholdFinder;
 import com.overkill.client.module.modules.TPAura;
 import com.overkill.client.module.modules.Timer;
 import com.overkill.client.module.modules.Tracers;
+import com.overkill.client.module.modules.TriggerBot;
 import com.overkill.client.module.modules.TrueSight;
 import com.overkill.client.module.modules.VeinMiner;
 import com.overkill.client.module.modules.Velocity;
@@ -108,7 +111,10 @@ public final class Modules {
 		new TrueSight(),
 		new ElytraFly(),
 		new BoatFly(),
-		new Timer()
+		new Timer(),
+		new AimBot(),
+		new TriggerBot(),
+		new BowAimbot()
 	);
 
 	private Modules() {
