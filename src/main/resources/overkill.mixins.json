@@ -16,7 +16,9 @@
 		"MinecraftFastPlaceAccessor",
 		"MultiPlayerGameModeMiningMixin",
 		"ClientLevelAccessor",
-		"BlockStatePredictionHandlerAccessor"
+		"BlockStatePredictionHandlerAccessor",
+		"LocalPlayerNoSlowMixin",
+		"EntityNoSlowMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
