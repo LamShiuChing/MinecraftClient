@@ -41,6 +41,9 @@ Settings and keybinds save to `config/overkill.json`.
 | World | Nuker | Breaks every block around you (range, Flatten = only at or above your feet); insta-mineable blocks all at once, others one per tick. Drops fall normally |
 | World | FastBreak | Mines about 30% faster (the server accepts a break at 70% progress) with no pause between blocks |
 | Combat | AutoTotem | Moves a Totem of Undying from your inventory to your offhand |
+| World | Hammer | Mining a block also breaks a flat 3x3 or 5x5 around it in the mined face's plane: blocks your tool is right for, or instant ones. Drops fall normally |
+| World | VeinMiner | Mining an ore or a log also breaks every connected block of the same kind, up to Max (ores, logs = tree feller). Drops fall normally |
+| Player | AutoTool | Switches to the best tool for the block you mine (one that gets drops first) and the strongest weapon for what you hit, also for Nuker, Hammer, VeinMiner and KillAura. Pulls tools from the main inventory, skips nearly broken ones (Save tools), switches back after manual use |
 
 ## Build
 
