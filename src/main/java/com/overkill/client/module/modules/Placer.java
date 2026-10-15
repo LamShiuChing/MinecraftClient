@@ -1,5 +1,7 @@
 package com.overkill.client.module.modules;
 
+import com.overkill.client.mixin.BlockStatePredictionHandlerAccessor;
+import com.overkill.client.mixin.ClientLevelAccessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
@@ -49,6 +51,11 @@ public final class Placer {
 		inv.setSelectedSlot(prev);
 		p.connection.send(new ServerboundMovePlayerPacket.Rot(p.getYRot(), p.getXRot(), p.onGround(), p.horizontalCollision));
 		return true;
+	}
+
+	/** True while a block placed (or broken) at pos is only a client prediction: the server hasn't answered yet. */
+	public static boolean pending(BlockPos pos) {
+		return ((BlockStatePredictionHandlerAccessor) ((ClientLevelAccessor) mc.level).overkill$getPredictions()).overkill$getServerVerifiedStates().containsKey(pos.asLong());
 	}
 
 	/** Held slot first, then hotbar, then main inventory (inventory and menu slot ids match for 9-35). -1 if none. */

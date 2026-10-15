@@ -12,6 +12,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.animal.cow.Cow;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -19,6 +21,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.HitResult;
 
 /** AutoPortal, AirPlace and LavaFiller in a survival flat world. Items, floors and lava are set up with commands (test only). */
@@ -49,36 +52,11 @@ public class Batch29GameTest implements FabricClientGameTest {
 
 	private static void autoPortal(ClientGameTestContext ctx, TestServerContext server, BlockPos o) {
 		int x = o.getX(), y = o.getY(), z = o.getZ();
-		// 12 obsidian in two main inventory stacks, flint and steel in the main inventory too, a stick in hand
-		arena(ctx, server, x, y, z);
-		server.runCommand("clear @p");
-		server.runCommand("item replace entity @p hotbar.0 with minecraft:stick");
-		server.runCommand("item replace entity @p container.10 with minecraft:obsidian 7");
-		server.runCommand("item replace entity @p container.30 with minecraft:obsidian 5");
-		server.runCommand("item replace entity @p container.25 with minecraft:flint_and_steel");
-		ctx.runOnClient(mc -> mc.player.getInventory().setSelectedSlot(0));
-		ctx.waitFor(mc -> mc.player.getInventory().countItem(Items.OBSIDIAN) == 12 && mc.player.getInventory().countItem(Items.FLINT_AND_STEEL) == 1, 40);
-		ctx.waitTicks(5);
-
-		ctx.runOnClient(mc -> module("AutoPortal").setEnabled(true));
-		int ticks = 0;
-		while (blocks(server, x, y, z, Blocks.NETHER_PORTAL) == 0) {
-			check(++ticks <= 40, "AutoPortal lights a portal within 2 s");
-			ctx.waitTick();
-		}
-		ctx.waitTicks(5);
-		int frame = blocks(server, x, y, z, Blocks.OBSIDIAN), portal = blocks(server, x, y, z, Blocks.NETHER_PORTAL);
-		int left = count(server, Items.OBSIDIAN), wear = server.computeOnServer(s -> flintAndSteel(player(s)).getDamageValue());
-		boolean off = !ctx.computeOnClient(mc -> module("AutoPortal").isEnabled());
-		boolean held = ctx.computeOnClient(mc -> mc.player.getInventory().getSelectedSlot() == 0 && mc.player.getMainHandItem().is(Items.STICK));
-		tp(server, x + 0.5, y, z - 3.5, 0);
-		ctx.waitTicks(10);
-		ctx.takeScreenshot("batch29-autoportal");
-		log("AutoPortal: lit portal seen server-side " + ticks + " ticks after enabling; frame " + frame + " obsidian, " + portal + " portal blocks, obsidian left " + left + " of 12, flint and steel damage " + wear + ", turned off " + off);
-		check(frame == 10 && portal == 6, "a 10 block frame with a 2x3 portal, " + frame + " / " + portal);
-		check(left == 2, "exactly 10 obsidian used, left " + left);
-		check(wear == 1, "flint and steel took 1 durability, " + wear);
-		check(off && held, "AutoPortal turns off and the held slot is back, off " + off + " held " + held);
+		light(ctx, server, x, y, z, null, null);
+		// A cow standing where the frame would go straight ahead (the server refuses a block inside a mob): it picks another spot
+		light(ctx, server, x, y, z, "a cow in the way", "summon minecraft:cow " + (x + 1.5) + " " + y + " " + (z + 1.5) + " {NoAI:1b}");
+		// One that turns up in the planned top row after the first tick and moves away 10 ticks later: those blocks wait for it
+		light(ctx, server, x, y, z, "a cow arriving late", "summon minecraft:cow " + (x + 0.5) + " " + (y + 3.8) + " " + (z + 1.5) + " {NoAI:1b,NoGravity:1b}");
 
 		// 9 obsidian: does nothing
 		arena(ctx, server, x, y, z);
@@ -94,6 +72,54 @@ public class Batch29GameTest implements FabricClientGameTest {
 		log("AutoPortal with 9 obsidian: placed " + frame9 + ", obsidian left " + left9 + ", flint and steel damage " + wear9 + ", turned off " + off9);
 		check(frame9 == 0 && left9 == 9 && wear9 == 0 && off9, "with 9 obsidian it places nothing and turns off");
 		server.runCommand("clear @p");
+	}
+
+	/**
+	 * 12 obsidian in two main inventory stacks, flint and steel in the main inventory too, a stick in hand: AutoPortal builds and
+	 * lights a portal. summon (case != null): a cow put there before enabling, or after the first tick and moved away 10 ticks later.
+	 */
+	private static void light(ClientGameTestContext ctx, TestServerContext server, int x, int y, int z, String cowCase, String summon) {
+		String what = cowCase == null ? "AutoPortal" : "AutoPortal with " + cowCase;
+		boolean late = cowCase != null && cowCase.contains("late"), cow = cowCase != null && !late;
+		arena(ctx, server, x, y, z);
+		if (cow) server.runCommand(summon);
+		server.runCommand("clear @p");
+		server.runCommand("item replace entity @p hotbar.0 with minecraft:stick");
+		server.runCommand("item replace entity @p container.10 with minecraft:obsidian 7");
+		server.runCommand("item replace entity @p container.30 with minecraft:obsidian 5");
+		server.runCommand("item replace entity @p container.25 with minecraft:flint_and_steel");
+		ctx.runOnClient(mc -> mc.player.getInventory().setSelectedSlot(0));
+		ctx.waitFor(mc -> mc.player.getInventory().countItem(Items.OBSIDIAN) == 12 && mc.player.getInventory().countItem(Items.FLINT_AND_STEEL) == 1
+			&& mc.level.getEntitiesOfClass(Cow.class, mc.player.getBoundingBox().inflate(6)).size() == (cow ? 1 : 0), 40);
+		ctx.waitTicks(5);
+		int mobs = server.computeOnServer(s -> s.overworld().getEntitiesOfClass(Mob.class, new AABB(x - 6, y - 1, z - 6, x + 7, y + 7, z + 7)).size());
+
+		ctx.runOnClient(mc -> module("AutoPortal").setEnabled(true));
+		int ticks = 0;
+		while (blocks(server, x, y, z, Blocks.NETHER_PORTAL) == 0) {
+			if (++ticks > 40) {
+				log(what + " FAILED after 40 ticks: obsidian blocks " + blocks(server, x, y, z, Blocks.OBSIDIAN) + ", fire " + blocks(server, x, y, z, Blocks.FIRE) + ", obsidian left " + count(server, Items.OBSIDIAN) + ", mobs in the arena " + mobs);
+				check(false, what + " lights a portal within 2 s");
+			}
+			ctx.waitTick();
+			if (late && ticks == 1) server.runCommand(summon);
+			if (late && ticks == 11) server.runCommand("tp @e[type=minecraft:cow] " + (x + 5.5) + " " + y + " " + (z - 4.5)); // a dying one would still block for 20 ticks
+		}
+		ctx.waitTicks(5);
+		int frame = blocks(server, x, y, z, Blocks.OBSIDIAN), portal = blocks(server, x, y, z, Blocks.NETHER_PORTAL);
+		int left = count(server, Items.OBSIDIAN), wear = server.computeOnServer(s -> flintAndSteel(player(s)).getDamageValue());
+		boolean off = !ctx.computeOnClient(mc -> module("AutoPortal").isEnabled());
+		boolean held = ctx.computeOnClient(mc -> mc.player.getInventory().getSelectedSlot() == 0 && mc.player.getMainHandItem().is(Items.STICK));
+		tp(server, x + 0.5, y, z - 3.5, 0);
+		ctx.waitTicks(10);
+		ctx.takeScreenshot(cowCase == null ? "batch29-autoportal" : late ? "batch29-autoportal-cow-late" : "batch29-autoportal-cow");
+		server.runCommand("kill @e[type=minecraft:cow]");
+		log(what + ": lit portal seen server-side " + ticks + " ticks after enabling; frame " + frame + " obsidian, " + portal + " portal blocks, obsidian left " + left + " of 12, flint and steel damage " + wear + ", turned off " + off + ", mobs in the arena " + mobs);
+		check(frame == 10 && portal == 6, what + ": a 10 block frame with a 2x3 portal, " + frame + " / " + portal);
+		check(left == 2, what + ": exactly 10 obsidian used, left " + left);
+		check(wear == 1, what + ": flint and steel took 1 durability, " + wear);
+		check(!late || ticks > 11, what + ": the top row waited for the cow, lit after " + ticks + " ticks");
+		check(off && held, what + ": turns off and the held slot is back, off " + off + " held " + held);
 	}
 
 	private static void airPlace(ClientGameTestContext ctx, TestServerContext server, BlockPos o) {
